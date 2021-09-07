@@ -1,0 +1,13 @@
+#training{
+
+	table{
+		tbody{
+			tr{
+				&:hover{
+					box-shadow: 1px 10px 10px rgba(#333, .1);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

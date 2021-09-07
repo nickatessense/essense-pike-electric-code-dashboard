@@ -1,0 +1,54 @@
+body{
+	background-color: $lightBlue;
+}
+
+.bg-blue{
+	background-color: $blue;
+}
+
+.bg-darkBlue{
+	background-color: $darkBlue;
+}
+
+.bg-lightgrey{
+	background-color:$lightGrey;
+}
+
+.bg-lightergrey{
+	background-color:$lighterGrey;
+}
+
+.border-blue{
+	border:solid 2px $blue;
+}
+
+.border-grey{
+	border:solid 2px $lightGrey;
+}
+
+.border-x-grey{
+	border-left: solid 2px $lighterGrey;
+	border-right: solid 2px $lighterGrey;
+}
+
+.border-bottom-grey{
+	border-bottom:solid 2px $lighterGrey;
+}
+
+.tiny-icon{
+	align-items:center;
+	display: flex;
+	font-size: 25px;
+	justify-content: center;
+	height: 35px;
+	padding:5px;
+	width: 35px;
+}
+
+.radius-circle{
+	border-radius:100%;
+}
+
+.inline-block{
+	display: inline-block;
+}

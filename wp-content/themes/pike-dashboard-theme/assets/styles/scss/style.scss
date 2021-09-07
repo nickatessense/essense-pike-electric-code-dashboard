@@ -1,0 +1,29 @@
+@use 'sass:math';
+
+// General Styles
+@import "variables";
+@import "reset";
+@import "base";
+@import "mixins";
+@import "typography";
+@import "theme";
+@import "layout";
+@import "header";
+
+// Reusable Components Styling
+@import "components/image";
+@import "components/menu";
+@import "components/card";
+@import "components/form";
+@import "components/button";
+@import "components/progress_ring";
+@import "components/table";
+@import "components/modal";
+
+// Modifications to vendor styles
+@import "vendor/jquery_ui";
+@import "vendor/highcharts";
+
+// Page Specific scss
+@import "pages/homepage";
+@import "pages/training";

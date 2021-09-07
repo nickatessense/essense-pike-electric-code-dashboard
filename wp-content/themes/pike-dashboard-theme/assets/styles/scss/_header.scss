@@ -1,0 +1,40 @@
+#main-sidebar{
+	background-color: $darkBlue;
+	color:white;
+	display: inline-block;
+	font-weight: 400;
+	max-width: 100vw;
+	min-height: 100vh;
+	min-width: 300px;
+	position:relative;
+	text-align: center;
+	width: 300px;
+
+	.sidebar-content{
+		padding: 2em;
+		position:fixed;
+		width: 300px;
+
+		.title{
+			border-bottom:solid 1px rgba(255,255,255,.3);
+			color: white;
+			font-size: 25px;
+			padding-bottom: 1em;
+			span{
+				background-color:white;
+				color: #333;
+				font-family: inherit;
+				padding:0em .25em;
+				margin-left: -10px;
+			}
+		}
+
+		.menu{
+			margin-top: 4em;
+			padding-left:2em;
+			text-align: left;
+		}
+
+	}
+
+}

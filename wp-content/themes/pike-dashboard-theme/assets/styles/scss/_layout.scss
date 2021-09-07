@@ -1,0 +1,68 @@
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.align-center{
+	align-items: center;
+}
+
+.justify-center{
+	justify-content: center;
+}
+
+.space-between{
+	justify-content: space-between;
+}
+
+.margin-x-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Creates general margin padding classes from 1 through 5
+@for $i from 0 through 10 {
+
+	.margin-#{$i}{
+		margin: math.div($i, 2) * 1em;
+	}
+	.margin-x-#{$i}{
+		margin-left: math.div($i, 2) * 1em;
+		margin-right: math.div($i, 2) * 1em;
+	}
+	.margin-y-#{$i}{
+		margin-bottom: math.div($i, 2) * 1em;
+		margin-top: math.div($i, 2) * 1em;
+	}
+	.margin-bottom-#{$i}{
+		margin-bottom: math.div($i, 2) * 1em;
+	}
+	.margin-top-#{$i}{
+		margin-top: math.div($i, 2) * 1em;
+	}
+	.padding-#{$i}{
+		padding: math.div($i, 2) * 1em;
+	}
+	.padding-x-#{$i}{
+		padding-left: math.div($i, 2) * 1em;
+		padding-right: math.div($i, 2) * 1em;
+	}
+	.padding-y-#{$i}{
+		padding-bottom: math.div($i, 2) * 1em;
+		padding-top: math.div($i, 2) * 1em;
+	}
+	.padding-bottom-#{$i}{
+		padding-bottom: math.div($i, 2) * 1em;
+	}
+	.padding-top-#{$i}{
+		padding-top: math.div($i, 2) * 1em;
+	}
+}
+
+
+// Creates cols 1 through 12
+@for $i from 1 through 12 {
+	.col-#{$i}{
+		width: math.div($i, 12) * 100% ;
+	}
+}

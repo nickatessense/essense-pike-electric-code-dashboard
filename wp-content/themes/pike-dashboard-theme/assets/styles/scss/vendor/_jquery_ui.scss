@@ -1,0 +1,49 @@
+.ui-slider{
+	background: $lighterGrey !important;
+	border:none !important;
+	height: 5px !important;
+	margin-bottom: 1em;
+	margin-top: 1em;
+
+	.ui-slider-handle{
+		align-items:center;
+		border:none !important;
+		border-radius:100% !important;
+		background: $blue !important;
+		display: flex;
+		color: white !important;
+		cursor: grab !important;
+		font-size:.7em !important;
+		padding: 1em !important;
+		height: 1.5em !important;
+		justify-content: center;
+		top: -0.8em !important;
+		width: 1.5em !important;
+		z-index: 1;
+
+		&.ui-state-active{
+			transform: scale(1.1);
+		}
+
+		&.ui-state-active, &.ui-state-focus{
+			outline: none !important;
+		}
+	}
+
+	.ui-slider-range{
+		background: $blue !important;	
+	}
+
+	.min,.max{
+		color: $lighterGrey;
+		position:absolute;
+		top: -5px;
+	}
+	.min{
+		left: -1em;
+	}
+	.max{
+		right: -2em;
+	}
+
+}

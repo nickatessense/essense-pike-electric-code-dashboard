@@ -1,0 +1,91 @@
+*{
+	box-sizing: border-box;
+	font-family: arial;
+	font-weight: inherit;
+	margin: 0px;
+	padding: 0px;
+	position:relative;
+}
+
+h1{
+	font-size: 40px;
+}
+h2{
+	font-size: 35px;
+}
+h3{
+	font-size: 30px;
+}
+h4{
+	font-size: 30px;
+}
+h5{
+	font-size: 25px;
+}
+h6{
+	font-size: 20px;
+}
+
+h1,h2,h3,h4,h5,h6{
+	color: $darkBlue;
+}
+
+strong{
+	font-weight: 600;
+	font-family: 'Arial Black';
+}
+
+input,select{
+	border:solid 1px $lighterGrey;
+	border-radius: 10px;
+	color: $darkBlue;
+	min-width: 200px;
+	padding: .15em .5em;
+}
+
+span{
+	vertical-align: middle;
+}
+
+hr{
+	border:solid 1px $lighterGrey;
+	margin:1em 0em;
+}
+
+table{
+	border-collapse: collapse;
+	text-align: left;
+	width: 100%;
+	tr{
+		border-bottom: solid 1px $lighterGrey;
+		border-top: solid 1px $lighterGrey;
+		th,td{
+			padding:1em;
+		}
+		th{
+			font-weight: 600;
+		}
+	}
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+input[type="date"]{
+	padding-left:1em;
+	position:relative;
+	&::-webkit-calendar-picker-indicator {
+		left: -1em;
+	    position:absolute;
+		-webkit-appearance: none;
+		opacity: 0;
+	}
+	&:before{
+		color: $blue;
+		content: "\f508";
+		font-family: dashicons;
+		padding-right:1em;
+	}
+}

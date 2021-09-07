@@ -1,0 +1,11 @@
+.form-group{
+	display: inline-block;
+	margin: 1em;
+	vertical-align: top;
+	label{
+		color:$lightGrey;
+		font-weight: 600;
+		display: block;
+		padding: 0em 0em .5em .25em;
+	}
+}
