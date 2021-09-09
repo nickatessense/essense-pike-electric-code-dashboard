@@ -1,4 +1,10 @@
 table{
+	color: $darkBlue;
+
+	th{
+		color: $lightGrey;
+	}
+
 	.show-more{
 		background: linear-gradient(to bottom, rgba(white, 0.5), rgba(white, 1));
 		border:none;
@@ -9,12 +15,43 @@ table{
 		bottom:0px;
 		padding-bottom:20px;
 		padding-top:60px;
-		text-align: center;
+		text-align: center !important;
 		&:after{
 			content: "\f347";
 			display: inline;
 			font-family: dashicons;
 			vertical-align: middle;
+		}
+	}
+}
+
+// Table Styling
+
+table.left-col-bold{
+	tbody{
+		tr{
+			td:first-of-type{
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+table.header-dark-blue{
+	thead{
+		background-color:$darkBlue;
+		tr{
+			th{
+				color: white;
+			}
+		}
+	}
+}
+
+table.left-col-text-left{
+	tr{
+		td:first-of-type{
+			text-align: left;
 		}
 	}
 }

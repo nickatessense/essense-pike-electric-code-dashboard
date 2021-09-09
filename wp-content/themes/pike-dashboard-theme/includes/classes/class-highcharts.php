@@ -7,6 +7,8 @@ if ( !class_exists('highcharts') ){
 
 class HighCharts{
 
+    public $chart_count = 0;
+
     /**
      * 
      * Function for displaying highchart bar chart in frontend
@@ -17,9 +19,17 @@ class HighCharts{
      * eg: [ [dataName => data], [ dataName2 => data2], [ dataName3 => data3] ]
      * 
      */
-    function displayBarChart($chart_title, $data, $data_type=''){
+    function displayBarChart($chart_title, $data_count, $data_type=''){
 
-        $chart_slug = sanitize_title($chart_title);
+        $data='';
+        for($i = 0; $i < $data_count; $i++){
+            $random_num = rand(1,100);
+            $data .= "{name: 'data_name_$i',y: $random_num},";
+        }
+
+        $this->chart_count = $this->chart_count + 1;
+
+        $chart_slug = sanitize_title($chart_title) .'-'.$this->chart_count;
 
         include get_template_directory() . '/includes/templates/template-bar-chart.php';  
 

@@ -1,0 +1,7 @@
+.home{
+	@include breakpoint(phone){
+		#training-summary, #assessment-summary{
+			width: 100%;
+		}
+	}
+}

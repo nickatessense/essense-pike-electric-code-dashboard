@@ -1,10 +1,21 @@
 jQuery(document).ready(function($){
 
+    mobileNavMenu();
+
     // Dropdown functionality
     toggleDropdowns();
 
     // Sets progress of every progress-ring class
     setProgressRing();
+
+    // Listens for every .modal-exit click then closes corresponding modal
+    modalExit();
+
+    // Listens for triggers to show modal
+    modalShow();
+
+    // For training page, toggles charts
+    summaryOptionsToggle();
 
     // Activates input range slider ability
     $( ".input-range-slider" ).slider({
@@ -29,8 +40,17 @@ jQuery(document).ready(function($){
         }
     });
 
-    function setProgressRing() {
+    function mobileNavMenu(){
+        $('#mobile-nav .dashicons-menu').click(function(){
 
+            console.log(  $(this).parents('#mobile-nav') );
+
+            $(this).parents('#mobile-nav').addClass('active');
+            $('#main-sidebar').css('width', '300px');
+        });
+    }
+
+    function setProgressRing() {
         let progress_rings = document.querySelectorAll('.progress-ring');
 
         for (let i = 0; i < progress_rings.length; i++) {
@@ -67,7 +87,6 @@ jQuery(document).ready(function($){
 
             progress_num.textContent = progress;
         }
-
     }
 
     function toggleDropdowns(){
@@ -80,6 +99,62 @@ jQuery(document).ready(function($){
                 $(link).addClass('active')
             }
 
+        });
+    }
+
+    function modalExit(){
+        $('.modal-exit').click(function(){
+            let modal_container = $(this).parents('.modal-container');
+            let modal = $(modal_container).find('.modal');
+            $(modal).slideUp(250, function(){
+                $(modal_container).fadeOut();
+            })
+        });
+
+        $('.modal-container').click(function(event){
+            if ($(event.target).hasClass('modal-container')) {
+                let modal_container = $(this);
+                let modal = $(modal_container).find('.modal');
+                $(modal).slideUp(250, function(){
+                    $(modal_container).fadeOut();
+                })
+            }
+        });
+    }
+
+    function modalShow(){
+        $('#classification-summary table tbody tr').click(function(){
+            let modal_container = $('#classification-summary-modal');
+            let modal = $(modal_container).find('.modal');
+            $(modal_container).css('display','flex');
+            $(modal).slideDown(250);
+        });
+        $('#experience-summary table tbody tr').click(function(){
+            let modal_container = $('#experience-summary-modal');
+            let modal = $(modal_container).find('.modal');
+            $(modal_container).css('display','flex');
+            $(modal).slideDown(250);
+        });
+    }
+
+    function summaryOptionsToggle(){
+        $('.summary .option').click(function(){
+            let parent_container = $(this).parents('.summary');
+            let options = $(this).parent('.options');
+            let action =  $(this).attr('data-action');
+
+            $(options).find('.option').removeClass('active');
+            $(this).addClass('active');
+
+            if (action == 'toggle-tables') {
+                $(parent_container).find('.card .tables').css('display', 'flex');
+                $(parent_container).find('.card .charts').css('display', 'none');
+            }
+
+            if (action == 'toggle-charts') {
+                $(parent_container).find('.card .charts').css('display', 'flex');
+                $(parent_container).find('.card .tables').css('display', 'none');
+            }
         });
     }
 

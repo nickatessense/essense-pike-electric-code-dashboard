@@ -20,19 +20,23 @@ body{
 
 .border-blue{
 	border:solid 2px $blue;
+	margin: -1px;
 }
 
 .border-grey{
 	border:solid 2px $lightGrey;
+	margin: -1px;
 }
 
 .border-x-grey{
 	border-left: solid 2px $lighterGrey;
 	border-right: solid 2px $lighterGrey;
+	margin: -1px;
 }
 
 .border-bottom-grey{
 	border-bottom:solid 2px $lighterGrey;
+	margin: -1px;
 }
 
 .tiny-icon{
@@ -51,4 +55,8 @@ body{
 
 .inline-block{
 	display: inline-block;
+}
+
+.overflow-scroll{
+	overflow: scroll;
 }

@@ -1,5 +1,5 @@
 <div class="essense-partners-chart">
-<div id='<?php echo $chart_slug ; ?>' class='bar-chart'></div>
+<div id='<?php echo $chart_slug; ?>' class='bar-chart'></div>
 </div>
 
 <script type="text/javascript">
@@ -44,28 +44,7 @@ Highcharts.chart('<?php echo $chart_slug ; ?>', {
         {
             name: "<?php echo $chart_title ; ?>",
             color: '#6DBD68',
-            data: [
-                {
-                    name: "Foreman",
-                    y: 60,
-                },
-                {
-                    name: "A Lineman",
-                    y: 20,
-                },
-                {
-                    name: "B Lineman",
-                    y: 16,
-                },
-                {
-                    name: "C Lineman",
-                    y: 60,
-                },
-                {
-                    name: "Groundman",
-                    y: 30,
-                }
-            ]
+            data: [ <?php echo "$data"; ?> ]
         }
     ],
 });

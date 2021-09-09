@@ -1,0 +1,70 @@
+#Assessments{
+
+	table{
+		tbody{
+			tr{
+				&:hover{
+					box-shadow: 1px 10px 10px rgba(#333, .1);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.summary{
+
+		.options{
+			.option{
+				color: $blue;
+				cursor: pointer;
+				&.active{
+					background-color:$blue;
+					color: white;
+					fill: white;
+
+					img{
+						filter: brightness(0) invert(1);
+					}
+
+				}
+			}
+		}
+
+		@include breakpoint(phone){
+			.tables, .charts{
+				width: 100%;
+			}
+
+		}
+
+		.charts{
+			
+		}
+
+	}
+
+	#classification-summary-modal{
+		.modal-body{
+			.col-7{
+				width: 100%;
+			}
+		}
+	}
+
+	@include breakpoint(phone){
+		#assessment-data-comparison{
+			.col-6{
+				padding:1em;
+				width: 100%;
+				.card-header{
+					padding:0em;
+					.col-3{
+						padding: 1em;
+						width: initial;
+					}
+				}
+			}
+		}
+	}
+
+}

@@ -44,7 +44,7 @@
 				<span>Add More Data (Expand Data Set)</span>
 			</button>
 
-			<span class="text-light-grey margin-x-4">----OR----</span>
+			<span class="text-light-grey margin-x-4 margin-y-2">----OR----</span>
 
 			<button class="btn btn-round btn-lightBlue">
 				<span class="dashicons dashicons-plus-alt2"></span>
@@ -71,7 +71,7 @@
 				<option>2</option>
 				<option>3</option>
 			</select>
-			<span class="text-light-grey margin-x-2">----OR----</span>
+			<span class="text-light-grey margin-x-4 margin-y-2">----OR----</span>
 			<p class="text-light-grey margin-x-1">Start Date <input class="margin-2" type="date" name="start_date"></p>
 			<p class="text-light-grey margin-x-1">End Date <input class="margin-2" type="date" name="end_date"></p>
 			<button class="btn btn-blue" type="submit">Apply</button>

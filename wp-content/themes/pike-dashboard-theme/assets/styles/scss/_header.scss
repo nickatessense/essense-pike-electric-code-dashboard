@@ -1,3 +1,29 @@
+#mobile-nav{
+	background-color: $darkBlue;
+	color: white;
+	.title{
+		color: white;
+		font-size:25px;
+		span{
+			background-color:white;
+			color: $darkBlue;
+		}
+	}
+	.dashicons-menu{
+		font-size: 40px;
+		height: 40px;
+		width: 40px;
+	}
+
+	&.active{
+		.title{
+			opacity: 0;
+		}
+	}
+
+}
+
+
 #main-sidebar{
 	background-color: $darkBlue;
 	color:white;
@@ -9,6 +35,11 @@
 	position:relative;
 	text-align: center;
 	width: 300px;
+
+	@include breakpoint(phone){
+		min-width:0px;
+		width: 0px;
+	}
 
 	.sidebar-content{
 		padding: 2em;
@@ -38,3 +69,4 @@
 	}
 
 }
+

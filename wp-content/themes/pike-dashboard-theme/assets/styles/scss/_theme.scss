@@ -2,6 +2,10 @@
 	display: flex;
 	#page-content{
 		flex-grow: 1;
+		margin:4em;
+		@include breakpoint(phone){
+			margin: 1em;
+		}
 	}
 }
 

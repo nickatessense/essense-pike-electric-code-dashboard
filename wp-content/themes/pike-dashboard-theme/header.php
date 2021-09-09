@@ -16,9 +16,17 @@
 </head>
 <body <?php body_class(); ?> >
 
+	<nav id="mobile-nav">
+		<div class="row align-center space-between padding-1">
+			<h1 class="title font-fira-code">electric <span>code</span></h1>
+			<span class="dashicons dashicons-menu"></span>
+		</div>
+	</nav>
+
 	<div id="page-container" >
 
 		<header id="main-sidebar" class="sidebar">
+
 			<div class="sidebar-content">
 				<h1 class="title font-fira-code">electric <span>code</span></h1>
 

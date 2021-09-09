@@ -1,7 +1,7 @@
 .modal-container{
 	align-items:center;
 	background-color: rgba(#000, .6);
-	display: flex;
+	display: none;
 	height: 100vh;
 	justify-content: center;
 	left: 0px;
@@ -13,25 +13,45 @@
 
 	@include breakpoint(tablet){
 		padding: 0px;
+
+		table{
+			min-width: 500px;
+			overflow: scroll;
+		}
+
 	}
 
 	.modal{
-		background-color:white;
+		background-color: $lightBlue;
 		border-radius: 10px;
+		display: none;
 		max-width: 90%;
 		overflow: hidden;
-
 		&.large{
-			width: 70%;
+			width: 85%;
 		}
-
 		.modal-header{
 			background-color:$darkBlue;
 			color: white;
 			padding: 1em;
+			position:relative;
 			h1,h2,h3,h4,h5,h6,p{
 				color: white;
 			}
+
+			.modal-options{
+				align-items:center;
+				bottom: 35%;	
+				display: flex;
+				height: 30%;
+				position:absolute;
+				right: 1em;
+				top: 35%;
+				.modal-exit{
+					cursor: pointer;
+				}
+			}
+
 		}
 
 		.modal-body{
