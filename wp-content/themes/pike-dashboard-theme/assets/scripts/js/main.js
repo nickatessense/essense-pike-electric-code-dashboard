@@ -43,10 +43,16 @@ jQuery(document).ready(function($){
     function mobileNavMenu(){
         $('#mobile-nav .dashicons-menu').click(function(){
 
-            console.log(  $(this).parents('#mobile-nav') );
+            let mobile_nav = $(this).parents('#mobile-nav');
+            let main_sidebar = $('#main-sidebar');
 
-            $(this).parents('#mobile-nav').addClass('active');
-            $('#main-sidebar').css('width', '300px');
+            if( $(mobile_nav).hasClass('active') ){
+                $(mobile_nav).removeClass('active');
+                $(main_sidebar).removeClass('active');
+            }else{
+                $(mobile_nav).addClass('active');
+                $(main_sidebar).addClass('active');
+            }
         });
     }
 
