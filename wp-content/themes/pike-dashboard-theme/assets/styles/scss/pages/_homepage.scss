@@ -1,7 +1,12 @@
 .home{
-	@include breakpoint(phone){
+	@include breakpoint(tabletSmall){
 		#training-summary, #assessment-summary{
 			width: 100%;
+
+			.padding-6{
+				padding:1em;
+			}
+
 		}
 	}
 }

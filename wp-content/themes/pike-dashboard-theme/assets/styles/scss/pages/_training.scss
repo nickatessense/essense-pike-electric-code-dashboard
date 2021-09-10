@@ -6,7 +6,7 @@
 					box-shadow: 1px 10px 10px rgba(#333, .1);
 					cursor: pointer;
 				}
-				@include breakpoint(phone){
+				@include breakpoint(tabletSmall){
 					td{
 						text-align: center;
 					}
@@ -15,7 +15,7 @@
 		}
 	}
 
-	@include breakpoint(phone){
+	@include breakpoint(tabletSmall){
 		#classification-summary-modal, #experience-summary-modal{
 			.col-3{
 				border:none;
@@ -28,7 +28,7 @@
 
 			.padding-5{
 				padding:1em;
-			}
+			} 
 
 		}
 
@@ -78,7 +78,7 @@
 
 	}
 
-	@include breakpoint(phone){
+	@include breakpoint(tabletSmall){
 		.charts{
 			.col-5{
 				width: 100%;

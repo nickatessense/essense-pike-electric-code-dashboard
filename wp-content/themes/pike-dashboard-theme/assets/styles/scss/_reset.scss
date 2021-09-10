@@ -58,15 +58,23 @@ hr{
 
 table{
 	border-collapse: collapse;
+	position:relative;
 	table-layout: fixed;
 	text-align: left;
 	width: 100%;
+
 
 	tr{
 		border-bottom: solid 1px $lighterGrey;
 		border-top: solid 1px $lighterGrey;
 		th,td{
 			padding:1em;
+
+			@include breakpoint(tabletSmall){
+				font-size: 14px;
+				padding:.5em;
+			}
+
 		}
 		th{
 			font-weight: 600;

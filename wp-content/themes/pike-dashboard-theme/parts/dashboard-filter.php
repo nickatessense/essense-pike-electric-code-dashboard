@@ -1,4 +1,4 @@
-<div class="card margin-bottom-2 padding-2">
+<div class="card margin-2 padding-2">
 	<form>
 
 		<div class="row align-center margin-2">

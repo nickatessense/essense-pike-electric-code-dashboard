@@ -22,6 +22,12 @@ table{
 			font-family: dashicons;
 			vertical-align: middle;
 		}
+
+		@include breakpoint(tabletSmall){
+			padding-bottom:10px;
+			padding-top:30px;
+		}
+
 	}
 }
 

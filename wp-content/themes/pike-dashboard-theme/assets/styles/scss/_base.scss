@@ -60,3 +60,13 @@ body{
 .overflow-scroll{
 	overflow: scroll;
 }
+
+.mobile-only{
+	display: none;
+}
+
+@include breakpoint(tabletSmall){
+	.mobile-only{
+		display: block;	
+	}
+}

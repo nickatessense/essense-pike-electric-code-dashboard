@@ -1,10 +1,16 @@
 #mobile-nav{
 	background-color: $darkBlue;
 	color: white;
+	display: none;
 	position:fixed;
 	top: 0px;
 	width: 100%;
 	z-index: 9999;
+
+	@include breakpoint(tabletSmall){
+		display: block;
+	}
+
 	.title{
 		color: white;
 		font-size:25px;
@@ -43,6 +49,7 @@
 	color:white;
 	display: inline-block;
 	font-weight: 400;
+	min-width: 300px;
 	max-width: 100vw;
 	min-height: 100vh;
 	position:relative;
@@ -77,8 +84,9 @@
 
 	}
 
-	@include breakpoint(phone){
+	@include breakpoint(tabletSmall){
 		overflow: hidden;
+		min-width: 0px;
 		width: 0px;
 
 		&.active{

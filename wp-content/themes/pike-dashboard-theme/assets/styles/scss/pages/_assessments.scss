@@ -30,7 +30,7 @@
 			}
 		}
 
-		@include breakpoint(phone){
+		@include breakpoint(tabletSmall){
 			.tables, .charts{
 				width: 100%;
 			}
@@ -51,7 +51,7 @@
 		}
 	}
 
-	@include breakpoint(phone){
+	@include breakpoint(tabletSmall){
 		#assessment-data-comparison{
 			.col-6{
 				padding:1em;
