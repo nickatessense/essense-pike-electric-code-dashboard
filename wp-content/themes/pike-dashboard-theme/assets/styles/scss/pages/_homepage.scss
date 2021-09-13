@@ -9,4 +9,23 @@
 
 		}
 	}
+
+	@include breakpoint(phone){
+		#assessment-summary, #training-summary{
+			h3{
+				font-size: 25px;
+				margin: auto;
+				text-align: center;
+			}
+
+			.row.align-center.space-between{
+				justify-content: center;
+				h3,.options{
+					width: initial;
+				}
+			}
+
+		}
+	}
+
 }

@@ -11,6 +11,23 @@
 		}
 	}
 
+	@include breakpoint(phone){
+		#classification-summary, #experience-summary, #assessment-data-comparison{
+			h3{
+				font-size: 25px;
+				text-align: center;
+			}
+
+			.row.align-center.space-between{
+				justify-content: center;
+				h3,.options{
+					width: initial;
+				}
+			}
+
+		}
+	}
+
 	.summary{
 
 		.options{

@@ -24,6 +24,7 @@ get_header();
 			</div>
 			<div class="card">
 				<div class="tables">
+					<div class="table-container overflow-scroll">
 					<?php 
 						generateTable([
 							'headers' => [
@@ -40,6 +41,7 @@ get_header();
 							]
 						], 'left-col-bold'); 
 					?>
+					</div>
 				</div>
 				<div class="charts row space-around">
 					<div class="col-5">
@@ -66,6 +68,7 @@ get_header();
 			</div>
 			<div class="card">
 				<div class="tables row">
+					<div class="table-container overflow-scroll">
 					<?php 
 						generateTable([
 							'headers' => [
@@ -83,6 +86,7 @@ get_header();
 							]
 						], 'left-col-bold'); 
 					?>
+					</div>
 				</div>
 				<div class="charts row">
 					<?php $highcharts->displayBarChart('% Completed', 11); ?>
@@ -228,7 +232,7 @@ get_header();
 
 					<p class="text-light-grey text-center mobile-only">Table is scrollable</p>
 
-					<div class="table overflow-scroll">
+					<div class="table-container overflow-scroll">
 
 					<?php
 
@@ -256,7 +260,7 @@ get_header();
 
 					<p class="text-light-grey text-center mobile-only">Table is scrollable</p>
 
-					<div class="table overflow-scroll">
+					<div class="table-container overflow-scroll">
 					<?php
 
 						generateTable([
@@ -282,7 +286,7 @@ get_header();
 
 					<p class="text-light-grey text-center mobile-only">Table is scrollable</p>
 
-					<div class="table overflow-scroll">
+					<div class="table-container overflow-scroll">
 					<?php
 
 						generateTable([
@@ -369,7 +373,7 @@ get_header();
 
 							<p class="text-light-grey text-center mobile-only">Table is scrollable</p>
 
-							<div class="table overflow-scroll">
+							<div class="table-container overflow-scroll">
 							<?php
 
 								generateTable([
@@ -394,7 +398,7 @@ get_header();
 
 							<p class="text-light-grey text-center mobile-only">Table is scrollable</p>
 
-							<div class="table overflow-scroll">
+							<div class="table-container overflow-scroll">
 							<?php
 								generateTable([
 									'headers' => [
@@ -420,7 +424,7 @@ get_header();
 
 						<p class="text-light-grey text-center mobile-only">Table is scrollable</p>
 
-						<div class="table overflow-scroll">
+						<div class="table-container overflow-scroll">
 						<?php
 							generateTable([
 								'headers' => [

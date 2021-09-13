@@ -4,8 +4,14 @@
 	border-radius:10px;
 	position:relative;
 	overflow: hidden;
+	@include breakpoint(phone){
+		margin: 1em;
+		padding: 0em;
+		max-width: 90vw;
+	}
 }
 
 .card-footer{
 	padding:1em;
 }
+

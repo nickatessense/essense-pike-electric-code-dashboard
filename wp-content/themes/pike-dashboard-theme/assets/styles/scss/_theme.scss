@@ -6,6 +6,10 @@
 		@include breakpoint(tabletSmall){
 			margin: 1em;
 		}
+		@include breakpoint(phone){
+			margin: 0em;
+			margin-top:55px;
+		}
 	}
 }
 
