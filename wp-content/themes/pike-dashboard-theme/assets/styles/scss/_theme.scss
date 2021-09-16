@@ -3,10 +3,10 @@
 	#page-content{
 		flex-grow: 1;
 		margin:4em;
-		@include breakpoint(tabletSmall){
+		@include breakpoint(tablet){
 			margin: 1em;
 		}
-		@include breakpoint(phone){
+		@include breakpoint(tabletSmall){
 			margin: 0em;
 			margin-top:55px;
 		}

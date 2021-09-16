@@ -19,7 +19,9 @@
 			}
 
 			.row.align-center.space-between{
-				justify-content: center;
+				justify-content: space-around;
+				margin: auto;
+				max-width: 90vw;
 				h3,.options{
 					width: initial;
 				}
@@ -47,7 +49,7 @@
 			}
 		}
 
-		@include breakpoint(tabletSmall){
+		@include breakpoint(tablet){
 			.tables, .charts{
 				width: 100%;
 			}
@@ -68,7 +70,7 @@
 		}
 	}
 
-	@include breakpoint(tabletSmall){
+	@include breakpoint(tablet){
 		#assessment-data-comparison{
 			.col-6{
 				padding:1em;

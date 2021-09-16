@@ -1,5 +1,6 @@
 .home{
-	@include breakpoint(tabletSmall){
+
+	@include breakpoint(tablet){
 		#training-summary, #assessment-summary{
 			width: 100%;
 

@@ -1,4 +1,4 @@
-<div class="card margin-2 padding-2">
+<div id="dashboard-filter" class="card margin-2 padding-2">
 	<form>
 
 		<div class="row align-center margin-2">

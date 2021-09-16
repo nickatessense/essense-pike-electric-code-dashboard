@@ -1,0 +1,11 @@
+#dashboard-filter{
+
+	@include breakpoint(phone){
+		.row{
+			*:not(.btn-switch){
+				width: 100%;
+			}
+		}
+	}
+
+}

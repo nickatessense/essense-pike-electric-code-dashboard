@@ -16,7 +16,7 @@
 	}
 
 
-	@include breakpoint(phone){
+	@include breakpoint(tablet){
 		#classification-summary, #experience-summary, #training-data-comparison{
 			h3{
 				font-size: 25px;
@@ -24,7 +24,9 @@
 			}
 
 			.row.align-center.space-between{
-				justify-content: center;
+				justify-content: space-around;
+				margin: auto;
+				max-width: 90vw;
 				h3,.options{
 					width: initial;
 				}
@@ -33,7 +35,8 @@
 		}
 	}
 
-	@include breakpoint(tabletSmall){
+
+	@include breakpoint(tablet){
 		#classification-summary-modal, #experience-summary-modal{
 			.col-3{
 				border:none;
@@ -64,7 +67,7 @@
 				}
 			}
 
-			@include breakpoint(phone){
+			@include breakpoint(tabletSmall){
 				.padding-4{
 					padding:0px;
 				}
@@ -103,7 +106,7 @@
 
 	}
 
-	@include breakpoint(tabletSmall){
+	@include breakpoint(tablet){
 		.charts{
 			.col-5{
 				width: 100%;
