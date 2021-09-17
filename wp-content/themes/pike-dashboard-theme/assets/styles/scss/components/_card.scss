@@ -4,6 +4,7 @@
 	border-radius:10px;
 	position:relative;
 	overflow: hidden;
+	width: 100%;
 	@include breakpoint(phone){
 		margin: 1em auto;
 		padding: 0em;
@@ -12,6 +13,9 @@
 }
 
 .card-footer{
+	background-color: $darkBlue;
+	color: white;
+	text-align: center;
 	padding:1em;
 }
 

@@ -1,12 +1,15 @@
 <?php
 
+
 require_once(get_template_directory().'/includes/classes/class-highcharts.php');
 
 $highcharts = new HighCharts();
 
 // Register menus
 register_nav_menus([
-    'main-nav'      => 'Main Menu',       // Main nav in header
+    'supervisor-menu'      => 'Supervisor Menu',
+    'worker-menu'      => 'Worker Menu',
+    'executive-menu'      => 'Executive Menu',
 ]);
 
 function add_scripts(){
@@ -27,8 +30,11 @@ function add_scripts(){
 
 add_action('wp_enqueue_scripts', 'add_scripts');
 
+// Creating Roles Below
 
+add_role('worker', 'Worker', ['read' => true]);
 
+add_role('supervisor', 'Supervisor', ['read' => true]);
 
 // Temp Code used to generate tables
 function generateTable($table, $table_classes = ''){

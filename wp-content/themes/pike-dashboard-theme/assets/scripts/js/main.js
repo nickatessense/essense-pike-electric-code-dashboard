@@ -17,6 +17,28 @@ jQuery(document).ready(function($){
     // For training page, toggles charts
     summaryOptionsToggle();
 
+    // Sets all progress bars widths and tooltips
+    progressBarsInit();
+
+    // Slick slider
+    $('.slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerPadding: '30px',
+        infinite:true,
+        prevArrow: '<span class="slick-prev dashicons dashicons-arrow-left-alt2"></span>',
+        nextArrow: '<span class="slick-next dashicons dashicons-arrow-right-alt2"></span>',
+        responsive: [
+            {
+              breakpoint: 577,
+              settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+              }
+            }
+        ]
+    });
+
     // Activates input range slider ability
     $( ".input-range-slider" ).slider({
         range: true,
@@ -162,6 +184,35 @@ jQuery(document).ready(function($){
                 $(parent_container).find('.card .tables').css('display', 'none');
             }
         });
+    }
+
+    function progressBarsInit(){
+        $('.progress-bar').each( function(){
+
+            let completed_progress_bar = $(this).find('.progress[data-completed]');
+            let suggested_progress = $(this).find('.progress[data-suggested]');
+
+            let total = $(this).attr('data-total');
+            let completed = $(completed_progress_bar).attr('data-completed');
+            let suggested = $(suggested_progress).attr('data-suggested');
+
+            let percent_completed =  Math.round(( completed / total ) * 100);
+            let percent_suggested =  Math.round(( (suggested) / total ) * 100);
+
+            $(completed_progress_bar).html('<p>'+ percent_completed + '% Completed</p>');
+
+            $(completed_progress_bar).css('width', percent_completed + "%" );
+            $(completed_progress_bar).append('<span class="progress-tooltip">You\'re here<br><strong>'+completed+' Completed</strong></span>');
+
+            if (percent_suggested - percent_completed > 0 ) {
+                $(suggested_progress).css('width', percent_suggested - percent_completed + "%" );
+                $(suggested_progress).append('<span class="progress-tooltip">Suggested<br><strong>'+suggested+' Complete</strong></span>');
+            }
+
+            $(this).append('<span class="progress-tooltip">Total<br><strong>'+total+'</strong></span>');
+
+         
+        } );
     }
 
 });

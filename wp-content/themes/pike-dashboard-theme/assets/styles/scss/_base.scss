@@ -10,6 +10,14 @@ body{
 	background-color: $darkBlue;
 }
 
+.bg-lightBlue{
+	background-color: $lightBlue;
+}
+
+.bg-blue-gradient{
+	background: linear-gradient(to bottom right, $blue, darken($blue, 25%));
+}
+
 .bg-lightgrey{
 	background-color:$lightGrey;
 }
@@ -18,19 +26,41 @@ body{
 	background-color:$lighterGrey;
 }
 
+.bg-green{
+	background-color:$green;
+}
+
+.bg-lightGreen{
+	background-color:$lightGreen;
+}
+
+.bg-teal{
+	background-color:$teal;
+}
+
+.bg-lightTeal{
+	background-color:$lightTeal;
+}
+
 .border-blue{
 	border:solid 2px $blue;
 	margin: -1px;
 }
 
 .border-grey{
-	border:solid 2px $lightGrey;
+	border:solid 2px $lighterGrey;
 	margin: -1px;
 }
 
 .border-x-grey{
 	border-left: solid 2px $lighterGrey;
 	border-right: solid 2px $lighterGrey;
+	margin: -1px;
+}
+
+.border-x-dark{
+	border-left: solid 2px $black;
+	border-right: solid 2px $black;
 	margin: -1px;
 }
 

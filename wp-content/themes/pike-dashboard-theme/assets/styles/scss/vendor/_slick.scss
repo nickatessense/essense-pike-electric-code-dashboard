@@ -1,0 +1,26 @@
+.slick-slider{
+	.slick-arrow{
+		align-items:center;
+		border-radius:100%;
+		display: flex;
+		font-size: 25px;
+		height: 25px;
+		justify-content: center;
+		position: absolute;
+		top: calc(50% - 12.5px);
+		width: 25px;
+		z-index: 99;
+
+		&.slick-prev{
+			right: 100%;
+		}
+		&.slick-next{
+			left: 100%;
+		}
+	}
+	.slick-track{
+		display: flex; 
+		height: 200px;
+	}
+
+}

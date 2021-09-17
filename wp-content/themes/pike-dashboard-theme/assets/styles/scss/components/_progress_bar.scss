@@ -1,0 +1,33 @@
+.progress-bar{
+	display: flex;
+	margin-bottom: 68px;
+	position:relative;
+
+	.progress{
+		padding:.5em 0em;
+		position:relative;
+	}
+
+	.progress-tooltip{
+		background-color:white;
+		color: black;
+		font-size: 12px;
+		left: calc(100% - 52px);
+	    position: absolute;
+	    top: 100%;
+	    width: 100px;
+
+	    &:hover{
+	    	z-index: 99;
+	    }
+
+	    &:before{
+	    	color: $teal;
+	    	content: "\f142";
+	    	display: block;
+	    	font-family: "dashicons";
+	    	font-size: 18px;
+	    }
+	}
+
+}

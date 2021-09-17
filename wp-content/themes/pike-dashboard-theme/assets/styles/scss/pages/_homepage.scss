@@ -1,31 +1,69 @@
 .home{
 
-	@include breakpoint(tablet){
-		#training-summary, #assessment-summary{
-			width: 100%;
+	#supervisor-home-page{
 
-			.padding-6{
-				padding:1em;
+		@include breakpoint(tablet){
+			#training-summary, #assessment-summary{
+				width: 100%;
+
+				.padding-6{
+					padding:1em;
+				}
+
 			}
-
 		}
+
+		@include breakpoint(phone){
+			#assessment-summary, #training-summary{
+				h3{
+					font-size: 25px;
+					margin: auto;
+					text-align: center;
+				}
+
+				.row.align-center.space-between{
+					justify-content: center;
+					h3,.options{
+						width: initial;
+					}
+				}
+
+			}
+		}
+
 	}
 
-	@include breakpoint(phone){
-		#assessment-summary, #training-summary{
-			h3{
-				font-size: 25px;
-				margin: auto;
-				text-align: center;
-			}
+	#workers-home-page{
+		@include breakpoint(desktopSmall){
+			.row{
+				.col-6{
+					margin-top: 2em;
+					padding:0px;
+					width: 100%;
+				}
 
-			.row.align-center.space-between{
-				justify-content: center;
-				h3,.options{
-					width: initial;
+				.col{
+					margin: 1em	;
+				}
+
+			}
+		}
+
+		@include breakpoint(tablet){
+			margin-left: 1em;
+			max-width: 90%;
+		}
+
+		@include breakpoint(tabletSmall){
+			margin:1em auto;
+		}
+
+		@include breakpoint(phone){
+			.row:first-of-type{
+				.card{
+					padding:2em;
 				}
 			}
-
 		}
 	}
 

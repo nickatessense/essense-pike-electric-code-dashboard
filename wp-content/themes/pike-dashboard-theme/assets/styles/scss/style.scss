@@ -19,11 +19,13 @@
 @import "components/progress_ring";
 @import "components/table";
 @import "components/modal";
-@import "components/_dashboard-filter";
+@import "components/dashboard-filter";
+@import "components/progress_bar";
 
 // Modifications to vendor styles
 @import "vendor/jquery_ui";
 @import "vendor/highcharts";
+@import "vendor/slick";
 
 // Page Specific scss
 @import "pages/homepage";

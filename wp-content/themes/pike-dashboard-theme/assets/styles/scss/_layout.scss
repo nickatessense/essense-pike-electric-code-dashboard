@@ -1,6 +1,8 @@
 .row{
 	display: flex;
 	flex-wrap: wrap;
+	position:relative;
+	width: 100%;
 }
 
 .align-center{
@@ -30,6 +32,12 @@
 	.margin-#{$i}{
 		margin: math.div($i, 2) * 1em;
 	}
+	.margin-left-#{$i}{
+		margin-left: math.div($i, 2) * 1em;
+	}
+	.margin-right-#{$i}{
+		margin-right: math.div($i, 2) * 1em;
+	}
 	.margin-x-#{$i}{
 		margin-left: math.div($i, 2) * 1em;
 		margin-right: math.div($i, 2) * 1em;
@@ -46,6 +54,12 @@
 	}
 	.padding-#{$i}{
 		padding: math.div($i, 2) * 1em;
+	}
+	.padding-left-#{$i}{
+		padding-left: math.div($i, 2) * 1em;
+	}
+	.padding-right-#{$i}{
+		padding-right: math.div($i, 2) * 1em;
 	}
 	.padding-x-#{$i}{
 		padding-left: math.div($i, 2) * 1em;
@@ -65,8 +79,15 @@
 
 
 // Creates cols 1 through 12
+
+.col{
+	flex: auto;
+	position:relative; 
+}
+
 @for $i from 1 through 12 {
 	.col-#{$i}{
+		position:relative;
 		width: math.div($i, 12) * 100% ;
 	}
 }

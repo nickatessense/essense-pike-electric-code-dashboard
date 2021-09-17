@@ -1,3 +1,9 @@
+<?php
+	// Global Variables, will be available throughout header, footer, and page template files
+	$current_user = wp_get_current_user();
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +18,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
@@ -35,7 +42,15 @@
 				<h6 class="text-white">John Doe</h6>
 				<p class="text-light-grey">johndoe@pike.com</p>
 
-				<?php wp_nav_menu('main-nav'); ?>
+				<?php
+
+				if (in_array('supervisor', $current_user->roles)) {
+					wp_nav_menu([ 'menu' => 'supervisor-menu']);
+				}else if (in_array('worker', $current_user->roles)) {
+					wp_nav_menu([ 'menu' => 'worker-menu']);
+				}
+
+				?>
 
 				</div>
 		</header>
