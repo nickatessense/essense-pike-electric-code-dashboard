@@ -1,4 +1,5 @@
 button{
+	background-color: transparent;
 	border:none;
 	padding:.5em 1.5em;
 	.dashicons{
@@ -9,29 +10,56 @@ button{
 		vertical-align: middle;
 	}
 
+	@include breakpoint(phoneSmall){
+		margin: 1em;
+		width: 100%;
+	}
+
 }
 
 .btn-round{
 	border-radius:20px;
 }
 
-.btn-lightBlue{
-	background-color: rgba($blue, .2);
-	color: $blue;
+.btn-light-skyBlue{
+	background-color: rgba($skyBlue, .2);
+	border: solid 2px rgba($skyBlue, .2);
+	color: $skyBlue;
+}
+
+.btn-skyBlue{
+	background-color: $skyBlue;
+	border: solid 2px $skyBlue;
+	color: white;	
 }
 
 .btn-lightGreen{
 	background-color: rgba($green, .2);
+	border: solid 2px rgba($green, .2);
 	color: $green;
 }
 
 .btn-lightYellow{
 	background-color: rgba($yellow, .2);
+	border: solid 2px rgba($yellow, .2);
 	color: $yellow;
+}
+
+.btn-green{
+	background-color: $green;
+	border: solid 2px $green;
+	color: white;
+}
+
+.btn-yellow{
+	background-color: $yellow;
+	border: solid 2px $yellow;
+	color: white;
 }
 
 .btn-blue{
 	background-color: $blue;
+	border: solid 2px $blue;
 	color: white;
 }
 

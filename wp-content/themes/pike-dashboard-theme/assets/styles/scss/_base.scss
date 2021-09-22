@@ -2,6 +2,10 @@ body{
 	background-color: $lightBlue;
 }
 
+.bg-white{
+	background-color: white;
+}
+
 .bg-blue{
 	background-color: $blue;
 }
@@ -14,8 +18,12 @@ body{
 	background-color: $lightBlue;
 }
 
+.bg-skyBlue{
+	background-color: $skyBlue;
+}
+
 .bg-blue-gradient{
-	background: linear-gradient(to bottom right, $blue, darken($blue, 25%));
+	background: linear-gradient(to right, $skyBlue, $blue);
 }
 
 .bg-lightgrey{
@@ -47,6 +55,11 @@ body{
 	margin: -1px;
 }
 
+.border-skyBlue{
+	border:solid 2px $skyBlue;
+	margin: -1px;
+}
+
 .border-grey{
 	border:solid 2px $lighterGrey;
 	margin: -1px;
@@ -66,6 +79,11 @@ body{
 
 .border-bottom-grey{
 	border-bottom:solid 2px $lighterGrey;
+	margin: -1px;
+}
+
+.border-right-grey{
+	border-right:solid 2px $lighterGrey;
 	margin: -1px;
 }
 
@@ -93,6 +111,10 @@ body{
 
 .mobile-only{
 	display: none;
+}
+
+.border-round{
+	border-radius:15px;
 }
 
 @include breakpoint(tabletSmall){

@@ -1,4 +1,4 @@
-<?php include_once 'parts/dashboard-filter.php' ?>
+<?php include_once  get_template_directory() . '/parts/dashboard-filter.php' ?>
 
 <div id="supervisor-home-page">
 
@@ -17,7 +17,7 @@
 						</svg>
 					</div>
 					<div class="progress-ring-key text-center">
-						<div><span class="bg-blue margin-x-1" style="padding: .5em; display: inline-block;"></span>Complete</div>
+						<div><span class="bg-skyBlue margin-x-1" style="padding: .5em; display: inline-block;"></span>Complete</div>
 						<div><span class="bg-lightergrey margin-x-1" style="padding: .5em; display: inline-block;"></span>Incomplete</div>
 					</div>
 				</div>
@@ -52,7 +52,7 @@
 						</svg>
 					</div>
 					<div class="progress-ring-key text-center">
-						<div><span class="bg-blue margin-x-1" style="padding: .5em; display: inline-block;"></span>Passed</div>
+						<div><span class="bg-skyBlue margin-x-1" style="padding: .5em; display: inline-block;"></span>Passed</div>
 						<div><span class="bg-lightergrey margin-x-1" style="padding: .5em; display: inline-block;"></span>Incomplete</div>
 					</div>
 				</div>

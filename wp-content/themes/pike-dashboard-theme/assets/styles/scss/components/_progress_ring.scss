@@ -4,7 +4,7 @@
   width: 200px;
 
   .progress-num{
-    color: $blue;
+    color: $skyBlue;
     font-size: 40px;
     font-weight: 600;
     left: 35%;
@@ -28,7 +28,7 @@
 
     .progress-ring-circle {
       fill: transparent;
-      stroke:$blue;
+      stroke:$skyBlue;
       stroke-width:15px;
       transition: 0.35s stroke-dashoffset;
       transform: rotate(-90deg);

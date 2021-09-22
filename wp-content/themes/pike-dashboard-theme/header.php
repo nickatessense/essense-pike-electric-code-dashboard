@@ -19,6 +19,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+	<script src="https://code.highcharts.com/stock/highstock.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
@@ -44,7 +48,7 @@
 
 				<?php
 
-				if (in_array('supervisor', $current_user->roles)) {
+				if (in_array('supervisor', $current_user->roles) || in_array('administrator', $current_user->roles)) {
 					wp_nav_menu([ 'menu' => 'supervisor-menu']);
 				}else if (in_array('worker', $current_user->roles)) {
 					wp_nav_menu([ 'menu' => 'worker-menu']);

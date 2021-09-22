@@ -1,3 +1,56 @@
 .highcharts-credits{
 	display: none;
 }
+
+.spider-chart{
+
+	.spider-chart-data{
+		background-color:rgba(white,.5);
+		padding: 1em;
+		position:relative;
+
+		.spider-chart-name{
+			color: $darkBlue;
+			display: block;
+			font-size: 14px;
+			text-align: center;
+		}
+		.spider-chart-value{
+			color: $skyBlue;
+			fill: $skyBlue;
+			display: block;
+			font-size: 20px;
+			text-align: center;
+		}
+		.tooltip{
+			cursor: pointer;
+			left: 100%;
+			min-width: 10px;
+			position:absolute;
+			top: 20%;
+			z-index: 99;
+			img{
+				width: 10px;
+			}
+			.tooltip-text{
+				background-color:$darkBlue;
+				color: white;
+				display: none;
+				padding:10px;
+			}
+
+			&:hover{
+				.tooltip-text{
+					display: block;
+					position:absolute;
+					right: 0px;
+					top: -15px;
+					white-space: pre-wrap;
+					width: 150px;
+				}
+			}
+		}
+
+	}
+
+}

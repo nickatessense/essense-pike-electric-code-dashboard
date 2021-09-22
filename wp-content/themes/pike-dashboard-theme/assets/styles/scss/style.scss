@@ -12,7 +12,6 @@
 
 // Reusable Components Styling
 @import "components/image";
-@import "components/menu";
 @import "components/card";
 @import "components/form";
 @import "components/button";
@@ -21,6 +20,7 @@
 @import "components/modal";
 @import "components/dashboard-filter";
 @import "components/progress_bar";
+@import "components/accordion";
 
 // Modifications to vendor styles
 @import "vendor/jquery_ui";
@@ -31,3 +31,4 @@
 @import "pages/homepage";
 @import "pages/training";
 @import "pages/assessments";
+@import "pages/performance";

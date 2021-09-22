@@ -1,0 +1,71 @@
+#worker-performance-page{
+	.dashicons-info{
+		cursor: pointer;
+	}
+
+	@include breakpoint(tablet){
+		.performance-charts{
+			.col-5{
+				margin:2em auto;
+				width: 100%;
+			}
+		}
+
+		.completed-projects{
+			.row{
+				.col-2{
+					flex-grow: 1;
+				}
+				.col-4{
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(tabletSmall){
+		margin: 2em;
+	}
+
+	@include breakpoint(phone){
+
+		margin: 1em;
+
+		.accordion-header{
+
+			padding:1em;
+
+			.col-3{
+				flex-grow: 1;
+				width: initial;
+			}
+			.col-6{
+				flex-shrink: 1;
+				width: initial;
+			}
+
+			.accordion-toggler{
+				font-size: 14px;
+			}
+
+		}
+
+		.completed-projects{
+			.row{
+				.col-4{
+					margin: 1em;
+				}
+				.col-2{
+					width: 100%;
+
+					.margin-top-2.margin-bottom-6{
+						margin: 1em;
+					}
+
+				}
+			}
+		}
+
+	}
+
+}

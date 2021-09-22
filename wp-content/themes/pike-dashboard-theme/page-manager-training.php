@@ -6,7 +6,7 @@ get_header();
 ?>
 <div id="page-content">
 
-	<div id="training">
+	<div id="supervisor-training-page" class="training-page">
 
 		<?php include_once 'parts/dashboard-filter.php' ?>
 
@@ -14,10 +14,10 @@ get_header();
 			<div class="row align-center space-between">
 				<h3 class="col-9 text-dark-blue margin-y-1"><strong>Classification Summary</strong></h3>
 				<div class="row options">
-					<div class="option active border-blue" data-action='toggle-tables'>
+					<div class="option active border-skyBlue" data-action='toggle-tables'>
 						<span class="tiny-icon dashicons dashicons-menu"></span>
 					</div>
-					<div class="option border-blue" data-action='toggle-charts'>
+					<div class="option border-skyBlue" data-action='toggle-charts'>
 						<img class="tiny-icon" src="<?php echo get_template_directory_uri() . '/assets/images/line-chart.svg' ?>">
 					</div>
 				</div>
@@ -58,10 +58,10 @@ get_header();
 			<div class="row align-center space-between margin-top-5">
 				<h3 class="col-9 text-dark-blue margin-y-1"><strong>Experience Summary</strong></h3>
 				<div class="row options">
-					<div class="option active border-blue" data-action='toggle-tables'>
+					<div class="option active border-skyBlue" data-action='toggle-tables'>
 						<span class="tiny-icon dashicons dashicons-menu"></span>
 					</div>
-					<div class="option border-blue" data-action='toggle-charts'>
+					<div class="option border-skyBlue" data-action='toggle-charts'>
 						<img class="tiny-icon" src="<?php echo get_template_directory_uri() . '/assets/images/line-chart.svg' ?>">
 					</div>
 				</div>
@@ -102,19 +102,19 @@ get_header();
 					<div class="card-header bg-darkBlue row padding-3 font-strong space-around">
 						<div class="col-3 text-center">
 							<p class="text-white">Organization</p>
-							<p class="text-blue">Org 1</p>
+							<p class="text-sky-blue">Org 1</p>
 						</div>
 						<div class="col-3 text-center">
 							<p class="text-white">Customer</p>
-							<p class="text-blue">Cus 1</p>
+							<p class="text-sky-blue">Cus 1</p>
 						</div>
 						<div class="col-3 text-center">
 							<p class="text-white">Area Supervisor</p>
-							<p class="text-blue">Supervisor 1</p>
+							<p class="text-sky-blue">Supervisor 1</p>
 						</div>
 						<div class="col-3 text-center">
 							<p class="text-white">Tenure at Pike</p>
-							<p class="text-blue">10 - 20</p>
+							<p class="text-sky-blue">10 - 20</p>
 						</div>
 					</div>
 					<div class="card-body">
@@ -126,7 +126,7 @@ get_header();
 							</svg>
 						</div>
 						<div class="progress-ring-key text-center">
-							<div><span class="bg-blue margin-x-1" style="padding: .5em; display: inline-block;"></span>Complete</div>
+							<div><span class="bg-skyBlue margin-x-1" style="padding: .5em; display: inline-block;"></span>Complete</div>
 							<div><span class="bg-lightergrey margin-x-1" style="padding: .5em; display: inline-block;"></span>Incomplete</div>
 						</div>
 
@@ -145,19 +145,19 @@ get_header();
 					<div class="card-header bg-darkBlue row padding-3 font-strong space-around">
 						<div class="col-3 text-center">
 							<p class="text-white">Organization</p>
-							<p class="text-blue">Org 1</p>
+							<p class="text-sky-blue">Org 1</p>
 						</div>
 						<div class="col-3 text-center">
 							<p class="text-white">Customer</p>
-							<p class="text-blue">Cus 1</p>
+							<p class="text-sky-blue">Cus 1</p>
 						</div>
 						<div class="col-3 text-center">
 							<p class="text-white">Area Supervisor</p>
-							<p class="text-blue">Supervisor 1</p>
+							<p class="text-sky-blue">Supervisor 1</p>
 						</div>
 						<div class="col-3 text-center">
 							<p class="text-white">Tenure at Pike</p>
-							<p class="text-blue">10 - 20</p>
+							<p class="text-sky-blue">10 - 20</p>
 						</div>
 					</div>
 					<div class="card-body">
@@ -169,7 +169,7 @@ get_header();
 							</svg>
 						</div>
 						<div class="progress-ring-key text-center">
-							<div><span class="bg-blue margin-x-1" style="padding: .5em; display: inline-block;"></span>Complete</div>
+							<div><span class="bg-skyBlue margin-x-1" style="padding: .5em; display: inline-block;"></span>Complete</div>
 							<div><span class="bg-lightergrey margin-x-1" style="padding: .5em; display: inline-block;"></span>Incomplete</div>
 						</div>
 
@@ -196,33 +196,33 @@ get_header();
 				<div class="modal-body">
 
 					<div class="row align-center justify-center text-center">
-						<span class="dashicons dashicons-arrow-left-alt2 tiny-icon radius-circle border-blue margin-x-2"></span>
+						<span class="dashicons dashicons-arrow-left-alt2 tiny-icon radius-circle border-skyBlue margin-x-2"></span>
 						<div>
 							<h6 class="padding-y-1"><strong>Foreman</strong></h6>
-							<p class="text-blue">Average Scores</p>
+							<p class="text-sky-blue">Average Scores</p>
 						</div>
-						<span class="dashicons dashicons-arrow-right-alt2 tiny-icon radius-circle border-blue margin-x-2"></span>
+						<span class="dashicons dashicons-arrow-right-alt2 tiny-icon radius-circle border-skyBlue margin-x-2"></span>
 					</div>
 
 					<div class="row justify-center padding-3 text-center">
 						<div class="col-3">
 							<p class="text-dark-blue padding-2">Score</p>
 							<div class="row align-center justify-center">
-								<h2 class="text-blue"><strong>70</strong></h2>
+								<h2 class="text-sky-blue"><strong>70</strong></h2>
 								<button class="btn-round btn-lightGreen margin-x-1"><span class="dashicons dashicons-arrow-up-alt"></span> +20%</button>
 							</div>
 						</div>
 						<div class="col-3 border-x-grey">
 							<p class="text-dark-blue padding-2">% Complete</p>
 							<div class="row align-center justify-center">
-								<h2 class="text-blue"><strong>60%</strong></h2>
+								<h2 class="text-sky-blue"><strong>60%</strong></h2>
 								<button class="btn-round btn-lightGreen margin-x-1"><span class="dashicons dashicons-arrow-up-alt"></span> +20%</button>
 							</div>
 						</div>
 						<div class="col-3">
 							<p class="text-dark-blue padding-2">Proper Tools</p>
 							<div class="row align-center justify-center">
-								<h2 class="text-blue"><strong>90%</strong></h2>
+								<h2 class="text-sky-blue"><strong>90%</strong></h2>
 								<button class="btn-round btn-lightGreen margin-x-1"><span class="dashicons dashicons-arrow-up-alt"></span> +20%</button>
 							</div>
 						</div>
@@ -328,40 +328,40 @@ get_header();
 				<div class="modal-body">
 
 					<div class="row align-center justify-center text-center">
-						<span class="dashicons dashicons-arrow-left-alt2 tiny-icon radius-circle border-blue margin-x-2"></span>
+						<span class="dashicons dashicons-arrow-left-alt2 tiny-icon radius-circle border-skyBlue margin-x-2"></span>
 						<div>
 							<h6 class="padding-y-1"><strong>Foreman</strong></h6>
-							<p class="text-blue">Average Scores</p>
+							<p class="text-sky-blue">Average Scores</p>
 						</div>
-						<span class="dashicons dashicons-arrow-right-alt2 tiny-icon radius-circle border-blue margin-x-2"></span>
+						<span class="dashicons dashicons-arrow-right-alt2 tiny-icon radius-circle border-skyBlue margin-x-2"></span>
 					</div>
 
 					<div class="row justify-center padding-3 text-center">
 						<div class="col-3">
 							<p class="text-dark-blue padding-2">Score</p>
 							<div class="row align-center justify-center">
-								<h2 class="text-blue"><strong>70</strong></h2>
+								<h2 class="text-sky-blue"><strong>70</strong></h2>
 								<button class="btn-round btn-lightGreen margin-x-1"><span class="dashicons dashicons-arrow-up-alt"></span> +20%</button>
 							</div>
 						</div>
 						<div class="col-3 border-x-grey">
 							<p class="text-dark-blue padding-2">% Complete</p>
 							<div class="row align-center justify-center">
-								<h2 class="text-blue"><strong>60%</strong></h2>
+								<h2 class="text-sky-blue"><strong>60%</strong></h2>
 								<button class="btn-round btn-lightGreen margin-x-1"><span class="dashicons dashicons-arrow-up-alt"></span> +20%</button>
 							</div>
 						</div>
 						<div class="col-3 border-x-grey">
 							<p class="text-dark-blue padding-2">Time</p>
 							<div class="row align-center justify-center">
-								<h2 class="text-blue"><strong>1:40</strong></h2>
+								<h2 class="text-sky-blue"><strong>1:40</strong></h2>
 								<button class="btn-round btn-lightGreen margin-x-1"><span class="dashicons dashicons-arrow-up-alt"></span> -20%</button>
 							</div>
 						</div>
 						<div class="col-3">
 							<p class="text-dark-blue padding-2">Proper Tools</p>
 							<div class="row align-center justify-center">
-								<h2 class="text-blue"><strong>90%</strong></h2>
+								<h2 class="text-sky-blue"><strong>90%</strong></h2>
 								<button class="btn-round btn-lightGreen margin-x-1"><span class="dashicons dashicons-arrow-up-alt"></span> +20%</button>
 							</div>
 						</div>

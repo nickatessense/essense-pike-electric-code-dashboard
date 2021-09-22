@@ -32,12 +32,6 @@
 	.margin-#{$i}{
 		margin: math.div($i, 2) * 1em;
 	}
-	.margin-left-#{$i}{
-		margin-left: math.div($i, 2) * 1em;
-	}
-	.margin-right-#{$i}{
-		margin-right: math.div($i, 2) * 1em;
-	}
 	.margin-x-#{$i}{
 		margin-left: math.div($i, 2) * 1em;
 		margin-right: math.div($i, 2) * 1em;
@@ -45,6 +39,12 @@
 	.margin-y-#{$i}{
 		margin-bottom: math.div($i, 2) * 1em;
 		margin-top: math.div($i, 2) * 1em;
+	}
+	.margin-left-#{$i}{
+		margin-left: math.div($i, 2) * 1em;
+	}
+	.margin-right-#{$i}{
+		margin-right: math.div($i, 2) * 1em;
 	}
 	.margin-bottom-#{$i}{
 		margin-bottom: math.div($i, 2) * 1em;
@@ -55,12 +55,6 @@
 	.padding-#{$i}{
 		padding: math.div($i, 2) * 1em;
 	}
-	.padding-left-#{$i}{
-		padding-left: math.div($i, 2) * 1em;
-	}
-	.padding-right-#{$i}{
-		padding-right: math.div($i, 2) * 1em;
-	}
 	.padding-x-#{$i}{
 		padding-left: math.div($i, 2) * 1em;
 		padding-right: math.div($i, 2) * 1em;
@@ -68,6 +62,12 @@
 	.padding-y-#{$i}{
 		padding-bottom: math.div($i, 2) * 1em;
 		padding-top: math.div($i, 2) * 1em;
+	}
+	.padding-left-#{$i}{
+		padding-left: math.div($i, 2) * 1em;
+	}
+	.padding-right-#{$i}{
+		padding-right: math.div($i, 2) * 1em;
 	}
 	.padding-bottom-#{$i}{
 		padding-bottom: math.div($i, 2) * 1em;

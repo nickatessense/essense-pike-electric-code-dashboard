@@ -7,7 +7,7 @@
 	width: 100%;
 	@include breakpoint(phone){
 		margin: 1em auto;
-		padding: 0em;
+		padding: 1em;
 		max-width: 90vw;
 	}
 }

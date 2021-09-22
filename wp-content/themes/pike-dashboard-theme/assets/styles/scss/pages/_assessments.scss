@@ -1,4 +1,4 @@
-#Assessments{
+.assessment-page{ // global css that applies to all assessment pages
 
 	table{
 		tbody{
@@ -10,6 +10,10 @@
 			}
 		}
 	}
+
+}
+
+#manager-assessment-page{
 
 	@include breakpoint(phone){
 		#classification-summary, #experience-summary, #assessment-data-comparison{
@@ -34,10 +38,10 @@
 
 		.options{
 			.option{
-				color: $blue;
+				color: $skyBlue;
 				cursor: pointer;
 				&.active{
-					background-color:$blue;
+					background-color:$skyBlue;
 					color: white;
 					fill: white;
 
@@ -83,6 +87,21 @@
 					}
 				}
 			}
+		}
+	}
+
+}
+
+#worker-assessment-page{
+
+	#completed-and-pending-assessments{
+
+		.options h5[data-action]{
+			cursor: pointer;
+		}
+
+		#pending-assessments-table{
+			display: none;
 		}
 	}
 

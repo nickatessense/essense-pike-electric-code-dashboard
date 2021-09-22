@@ -17,6 +17,7 @@
 
 table{
 	color: $darkBlue;
+	position:relative;
 
 	th{
 		color: $lightGrey;
@@ -24,15 +25,15 @@ table{
 
 	.show-more{
 		background: linear-gradient(to bottom, rgba(white, 0.5), rgba(white, 1));
+		bottom:0px;
 		border:none;
 		color: $darkBlue;
 		display:block;
-		width:100%;
 		position:absolute;
-		bottom:0px;
 		padding-bottom:20px;
 		padding-top:60px;
 		text-align: center !important;
+		width: 100%;
 		&:after{
 			content: "\f347";
 			display: inline;
@@ -75,6 +76,16 @@ table.left-col-text-left{
 	tr{
 		td:first-of-type{
 			text-align: left;
+		}
+	}
+}
+
+table.first-col-large{
+	tr{
+		th:first-of-type,td:first-of-type{
+			&:not(.show-more){
+				width: 50% ;
+			}
 		}
 	}
 }

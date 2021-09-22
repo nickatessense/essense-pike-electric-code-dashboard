@@ -1,0 +1,55 @@
+.accordion{
+	border-radius:10px;
+	overflow: hidden;
+
+	.accordion-item{
+		background-color:white;
+		border-bottom: solid 1px $lighterGrey;
+
+		&:last-of-type{
+			border-bottom: none;
+		}
+
+		.accordion-header{
+			padding: 1em 2em;
+			.accordion-toggler{
+				align-items:center;
+				background-color: #E9F0F8;
+				color: #A8B0BA;
+				cursor: pointer;
+				display: flex;
+				justify-content: center;
+				margin-left: auto;
+				padding:.3em;
+				font-size: 24px;
+				&:after{
+					content: "\f543";
+					font-family: dashicons;
+				}
+			}
+		}
+		.accordion-body{
+			display: none;
+		}
+
+		&.active{
+			border-radius:inherit;
+			margin-bottom: 1em;
+			.accordion-body{
+				display: block;
+			}
+			.accordion-header{
+				background-color: $skyBlue;
+				color: white;
+				.accordion-toggler{
+					background-color: rgba(#E9F0F8,.4);
+					color:white;
+					&:after{
+						content: "\f460";
+					}
+				}
+			}
+		}
+
+	}
+}

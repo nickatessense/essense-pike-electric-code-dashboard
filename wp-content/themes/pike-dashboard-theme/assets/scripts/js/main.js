@@ -14,11 +14,18 @@ jQuery(document).ready(function($){
     // Listens for triggers to show modal
     modalShow();
 
-    // For training page, toggles charts
+    // For Worker Charts toggles
+    workerChartsToggle();
+
+    // For Supervisor training page, toggles charts
     summaryOptionsToggle();
 
     // Sets all progress bars widths and tooltips
     progressBarsInit();
+
+    // Initiates all accordion functionality
+    accordion();
+
 
     // Slick slider
     $('.slider').slick({
@@ -151,18 +158,100 @@ jQuery(document).ready(function($){
     }
 
     function modalShow(){
+
+        // On Supervisor Training Page
         $('#classification-summary table tbody tr').click(function(){
-            let modal_container = $('#classification-summary-modal');
-            let modal = $(modal_container).find('.modal');
-            $(modal_container).css('display','flex');
-            $(modal).slideDown(250);
+            fadeInModal( $('#classification-summary-modal') );
         });
         $('#experience-summary table tbody tr').click(function(){
-            let modal_container = $('#experience-summary-modal');
-            let modal = $(modal_container).find('.modal');
-            $(modal_container).css('display','flex');
-            $(modal).slideDown(250);
+            fadeInModal( $('#experience-summary-modal') );
         });
+
+        // On Employee Training Page
+        $('#assignments-and-pending-table table tbody tr').click(function(){
+            fadeInModal( $('#no-data-available-modal') );
+        });
+        $('#completed-training-table table tbody tr').click(function(){
+            fadeInModal(  $('#completed-training-modal') );
+        });
+
+
+        // On Worker Job Performance page
+        $('#worker-performance-page .dashicons-info').click(function(){
+            console.log(this);
+            fadeInModal( $('#safety-modal') );
+        });
+
+    }
+
+    /**
+     * Pass jquery modal_container element 
+     */
+    function fadeInModal(modal_container){
+        console.log( modal_container );
+        let modal = $(modal_container).find('.modal');
+        $(modal_container).css('display','flex');
+        $(modal).slideDown(250);
+    }
+
+
+    function workerChartsToggle(){
+        $('#assignments-and-pending-training .options h5').click(function(){
+
+            let action = $(this).attr('data-action');
+
+            if (action != undefined) {
+                 $('#assignments-and-pending-training .options h5').addClass('text-light-grey');
+                $(this).removeClass('text-light-grey');
+            }
+
+            if (action == 'toggle-assignments-and-pending-table') {
+                $('#assignments-and-pending-training .table-container').slideUp();
+                $('#assignments-and-pending-training #assignments-and-pending-table').slideDown();
+            }
+
+            if (action == 'toggle-completed-training-table') {
+                $('#assignments-and-pending-training .table-container').slideUp();
+                $('#assignments-and-pending-training #completed-training-table').slideDown();
+            }
+        });
+
+        $('#completed-and-pending-assessments .options h5').click(function(){
+
+            let action = $(this).attr('data-action');
+
+            if (action != undefined) {
+                $('#completed-and-pending-assessments .options h5').addClass('text-light-grey');
+                $(this).removeClass('text-light-grey');
+            }
+
+            if (action == 'toggle-completed-assessments-table') {
+                $('#completed-and-pending-assessments .table-container').slideUp();
+                $('#completed-and-pending-assessments #completed-assessments-table').slideDown();
+            }
+
+            if (action == 'toggle-pending-assessments-table') {
+                $('#completed-and-pending-assessments .table-container').slideUp();
+                $('#completed-and-pending-assessments #pending-assessments-table').slideDown();
+            }
+
+        });
+
+
+        $("#completed-training-modal .modal-options .performance-trends").click( function(){
+            $("#completed-training-modal #training-results").fadeOut();
+            $('#completed-training-modal #performance-trends').fadeIn();
+            $('#completed-training-modal .modal-options .performance-trends').fadeOut(100);
+            $('#completed-training-modal .modal-options .training-results').delay(400).fadeIn(100);
+        } );
+
+        $("#completed-training-modal .modal-options .training-results").click( function(){
+            $('#completed-training-modal #performance-trends').fadeOut();
+            $("#completed-training-modal #training-results").fadeIn();
+            $('#completed-training-modal .modal-options .training-results').fadeOut(100);
+            $('#completed-training-modal .modal-options .performance-trends').delay(400).fadeIn(100);
+        } );
+
     }
 
     function summaryOptionsToggle(){
@@ -213,6 +302,24 @@ jQuery(document).ready(function($){
 
          
         } );
+    }
+
+    function accordion(){
+        $('.accordion-item .accordion-header').click(function(){
+            let accordion_item = $(this).parent('.accordion-item');
+
+
+            if ($(accordion_item).hasClass('active')) {
+                $(accordion_item).find('.accordion-body').slideUp(200,function(){
+                    $(accordion_item).delay(200).removeClass('active');
+                });
+            }else{
+                $(accordion_item).addClass('active');
+                $(accordion_item).find('.accordion-body').slideDown();
+            }
+
+        });
+
     }
 
 });

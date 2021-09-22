@@ -37,7 +37,7 @@ add_role('worker', 'Worker', ['read' => true]);
 add_role('supervisor', 'Supervisor', ['read' => true]);
 
 // Temp Code used to generate tables
-function generateTable($table, $table_classes = ''){
+function generateTable($table, $table_classes = '', $enable_button_generation = true){
 
     echo "<table class='$table_classes'>";
     echo "<thead>";
@@ -55,7 +55,10 @@ function generateTable($table, $table_classes = ''){
             echo "<tr>";
             foreach($row as $col){
                 if (strpos( $col, '%' ) != false || strpos( $col, ':' ) != false ) {
-                    $button = generateRandomGreenYellowButton();
+
+                    if ($enable_button_generation == true) {
+                        $button = generateRandomGreenYellowButton();
+                    }else{ $button = ''; }
                     echo "<td>$col $button</td>";
                 }else{
                     echo "<td>$col</td>";

@@ -30,25 +30,36 @@
 		&.large{
 			width: 85%;
 		}
+		&.medium{
+			width: 50%;
+		}
 		.modal-header{
 			background-color:$darkBlue;
 			color: white;
 			padding: 1em;
 			position:relative;
-			h1,h2,h3,h4,h5,h6,p{
-				color: white;
-			}
 
 			.modal-options{
 				align-items:center;
 				bottom: 35%;	
 				display: flex;
+				font-size: 12px;
 				height: 30%;
 				position:absolute;
 				right: 1em;
+				text-align: center;
 				top: 35%;
-				.modal-exit{
+
+				*{
 					cursor: pointer;
+					margin:.5em;
+				}
+
+				.tiny-icon{
+					margin: auto;
+				}
+				.modal-exit{
+					margin-left: 1.5em;
 				}
 			}
 
@@ -58,7 +69,7 @@
 			max-height: 75vh;
 			overflow: hidden;
 			overflow-y: scroll;
-			padding:1em;
+			padding:4em;
 		}
 
 	}

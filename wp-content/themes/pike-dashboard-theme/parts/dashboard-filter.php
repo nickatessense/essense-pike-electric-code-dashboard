@@ -39,14 +39,14 @@
 
 		<div class="row align-center margin-2">
 
-			<button class="btn btn-round btn-lightBlue">
+			<button class="btn btn-round btn-light-skyBlue">
 				<span class="dashicons dashicons-plus-alt2"></span>
 				<span>Add More Data (Expand Data Set)</span>
 			</button>
 
 			<span class="text-light-grey margin-x-4 margin-y-2">----OR----</span>
 
-			<button class="btn btn-round btn-lightBlue">
+			<button class="btn btn-round btn-light-skyBlue">
 				<span class="dashicons dashicons-plus-alt2"></span>
 				<span>Perform Comparison (Create New Data Set)</span>
 			</button>
@@ -61,7 +61,7 @@
 			  <input type="checkbox">
 			  <span class="switch round"></span>
 			</label>
-			<p class="text-blue">Rolling Average (Last 5 Attempts)</p>
+			<p class="text-sky-blue">Rolling Average (Last 5 Attempts)</p>
 		</div>
 
 		<div class="row align-center margin-2">
@@ -74,7 +74,7 @@
 			<span class="text-light-grey margin-x-4 margin-y-2">----OR----</span>
 			<p class="text-light-grey margin-x-1">Start Date <input class="margin-2" type="date" name="start_date"></p>
 			<p class="text-light-grey margin-x-1">End Date <input class="margin-2" type="date" name="end_date"></p>
-			<button class="btn btn-blue" type="submit">Apply</button>
+			<button class="btn btn-light-skyBlue" type="submit">Apply</button>
 		</div>
 
 	</form>

@@ -54,6 +54,46 @@ class HighCharts{
 
     }
 
+    /**
+     * Temp Code used to generate Spider Charts
+     * @param string $chartslug - Takes a slug which must be unique  
+     * @param array $data - an array of key value pairs, where the key represents the name of the data and value is the num amount
+     */
+    function generateSpiderChart($chart_slug, $highcharts_data){
+
+        $js_data = '[';
+        $categories = '[';
+        foreach($highcharts_data as $name => $data){   
+            $js_data .= "{ name: '$data[name]', y: $data[value]},";
+            $categories .= "'$data[name]',"; 
+        }
+        $js_data .= ']';
+        $categories .= ']';
+
+        include get_template_directory() . '/includes/templates/template-spider-chart.php';  
+    }
+
+    /**
+     * Temp Code used to generate Line Charts
+     * @param string $chartslug - Takes a slug which must be unique  
+     * @param array $data - an array of key value pairs, where the key represents the name of the data and value is the num amount
+     * @param string $data_format - used to format data in charts, accepts: 'time' 
+     * @param string $color - used to specify line color, accepts: 'blue' or 'green' 
+     */
+    function generateLineChart($chart_slug, $highcharts_data, $data_format = null, $color = 'blue'){
+
+        $js_data = '[';
+        $categories = '[';
+        foreach($highcharts_data as $name => $data){   
+            $js_data .= "{ name: '$name', y: $data},";
+            $categories .= "'$name',"; 
+        }
+        $js_data .= ']';
+        $categories .= ']';
+
+        include get_template_directory() . '/includes/templates/template-line-chart.php';  
+    }
+
     function generateSampleData(){
         $highcharts_data = '';
         for($i = 0; $i < 5; $i++){

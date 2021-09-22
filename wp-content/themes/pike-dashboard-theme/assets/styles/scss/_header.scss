@@ -43,7 +43,6 @@
 
 }
 
-
 #main-sidebar{
 	background-color: $darkBlue;
 	color:white;
@@ -58,7 +57,7 @@
 	width: 300px;
 
 	.sidebar-content{
-		padding: 2em;
+		padding: 0em;
 		position:fixed;
 		width: 300px;
 
@@ -77,9 +76,94 @@
 		}
 
 		.menu{
+			list-style: none;
 			margin-top: 4em;
-			padding-left:2em;
 			text-align: left;
+
+			.current_page_item{
+				background-color: $blue;
+				position:relative;
+
+				&:before{
+					background-color: $skyBlue;
+					content: "";
+					height: .15em;
+					left: calc(25% - 2em);
+					position: absolute;
+					top: calc(50% - .1em);
+					width: 1.25em;
+				}
+
+			}
+
+			ul{
+				list-style: none;
+			}
+
+			.sub-menu{
+				padding:1em 0em;
+			}
+
+			a{
+				color: white;
+			}
+
+			.menu-item-has-children{
+				color: $blue;
+				font-weight: 600;
+				height: 3em;
+				overflow: hidden;
+
+				&.active{
+					height: initial;
+					overflow: initial;
+					&>a{
+						&:after{
+							content: "\f343";
+							display: inline;
+							font-family: "dashicons";
+							float: right;
+							vertical-align: middle;
+						}
+					}
+				}
+
+				&>a{
+					color: $skyBlue;
+					&:after{
+						content: "\f347";
+						display: inline;
+						font-family: "dashicons";
+						float: right;
+						vertical-align: middle;
+					}
+				}
+
+			}
+
+			.sub-menu{
+				.menu-item{
+					&:not(.menu-item-has-children){
+						padding-left:2em;
+						position:relative;
+						&:before{
+							background-color: $skyBlue;
+							content: "";
+							height: .15em;
+							left: 0em;
+							position: absolute;
+							top: calc(50% - .1em);
+							width: 1.25em;
+						}
+					}
+				}
+			}
+
+			li{
+				padding: 1em;
+				padding-left: 25%;
+			}
+
 		}
 
 	}

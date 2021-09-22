@@ -1,4 +1,5 @@
-#training{
+.training-page{ // global styles that apply to all training pages
+
 	table{
 		tbody{
 			tr{
@@ -14,6 +15,11 @@
 			}
 		}
 	}
+
+}
+
+
+#supervisor-training-page{
 
 
 	@include breakpoint(tablet){
@@ -81,10 +87,10 @@
 
 		.options{
 			.option{
-				color: $blue;
+				color: $skyBlue;
 				cursor: pointer;
 				&.active{
-					background-color:$blue;
+					background-color:$skyBlue;
 					color: white;
 					fill: white;
 
@@ -113,6 +119,35 @@
 				.essense-partners-chart{
 					margin:1em auto;
 				}
+			}
+		}
+	}
+
+}
+
+#worker-training-page{
+
+	#assignments-and-pending-training{
+		.options{
+			h5{
+				cursor: pointer;
+			}
+		}
+		.table-container{
+			display: none;
+			&:first-of-type{
+				display: block;
+			}
+		}
+	}
+
+	#completed-training-modal{
+		.modal-options{
+			.training-results{
+				display: none;
+			}
+			#performance-trends{
+				display: none;
 			}
 		}
 	}

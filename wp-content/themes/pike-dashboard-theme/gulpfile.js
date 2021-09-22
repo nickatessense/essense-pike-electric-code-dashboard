@@ -3,7 +3,7 @@ const gulp = require('gulp'),
 	  sass  = require('gulp-sass')(require('sass'))
 	  concat = require('gulp-concat')
 	  cssnano = require('gulp-cssnano')
-	  babel = require('gulp-babel');;
+	  babel = require('gulp-babel');
 
 // Compliling Sass
 gulp.task('sass', function(){
@@ -16,7 +16,9 @@ gulp.task('sass', function(){
 
 // Compliling Scripts
 gulp.task('scripts', function(){
-	return gulp.src('assets/scripts/js/**/*.js')
+	return gulp.src([
+				'assets/scripts/js/*.js',
+			])
 			.pipe( concat('main.js') )
 			.pipe(babel({
 	            presets: ["@babel/preset-env"]
