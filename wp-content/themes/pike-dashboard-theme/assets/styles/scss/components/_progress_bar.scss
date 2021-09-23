@@ -3,8 +3,12 @@
 	margin-bottom: 68px;
 	position:relative;
 
+	@include breakpoint(phone){
+		margin-top: 1em;
+		width: 100%;
+	}
+
 	.progress{
-		padding:.5em 0em;
 		position:relative;
 	}
 

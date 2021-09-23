@@ -29,10 +29,10 @@ jQuery(document).ready(function($){
 
     // Slick slider
     $('.slider').slick({
-        slidesToShow: 2,
+        slidesToShow: 2.5,
         slidesToScroll: 1,
         centerPadding: '30px',
-        infinite:true,
+        infinite:false,
         prevArrow: '<span class="slick-prev dashicons dashicons-arrow-left-alt2"></span>',
         nextArrow: '<span class="slick-next dashicons dashicons-arrow-right-alt2"></span>',
         responsive: [

@@ -13,7 +13,38 @@
 
 }
 
+#executive-assessements-page{
+	.slick-slider{
+		.slick-arrow{
+			background-color: $lightGrey;
+			color: white;
+			padding:1em;
+
+			&:hover{
+				background-color: $skyBlue;
+			}
+
+		}
+	}
+}
+
 #manager-assessment-page{
+
+	@include breakpoint(desktopWide){
+		#assessment-data-comparison{
+			.col-6{
+				padding:1em;
+				width: 100%;
+				.card-header{
+					padding:0em;
+					.col-3{
+						padding: 1em;
+						width: initial;
+					}
+				}
+			}
+		}
+	}
 
 	@include breakpoint(phone){
 		#classification-summary, #experience-summary, #assessment-data-comparison{
@@ -70,22 +101,6 @@
 		.modal-body{
 			.col-7{
 				width: 100%;
-			}
-		}
-	}
-
-	@include breakpoint(tablet){
-		#assessment-data-comparison{
-			.col-6{
-				padding:1em;
-				width: 100%;
-				.card-header{
-					padding:0em;
-					.col-3{
-						padding: 1em;
-						width: initial;
-					}
-				}
 			}
 		}
 	}

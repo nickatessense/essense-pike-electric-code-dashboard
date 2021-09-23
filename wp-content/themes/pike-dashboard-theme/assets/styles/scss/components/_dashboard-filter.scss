@@ -1,10 +1,70 @@
 #dashboard-filter{
 
+	@include breakpoint(desktopSmall){
+		.row{
+			&:nth-of-type(2){
+				button{
+					width: 40%;
+				}
+				.margin-x-4{
+					margin: 1em;
+				}
+			}
+		}
+	}
+
+
 	@include breakpoint(phone){
 		.row{
 			*:not(.btn-switch){
 				width: 100%;
 			}
+
+			.input-range-slider{
+				margin: 2em auto 1em;
+				width: 90%;
+
+				.min, .max{
+					width: initial;
+				}
+
+			}
+
+			&.margin-2{
+				margin:0px;
+			}
+
+			button{
+				margin:0px;
+				padding: .5em;
+			}
+
+			&:nth-of-type(2){
+				button{
+					width: 100%;
+				}
+			}
+
+			&:nth-of-type(3){
+				margin: 3em auto;
+				p{
+					text-align: center;
+					margin: .5em auto;
+				}
+				.btn-switch{
+					height: 25px;
+					margin: .5em auto;
+					width: 50px;
+				}
+			}
+
+			&:nth-of-type(4){
+				text-align: center;
+				input{
+					margin: 2em 0px;
+				}
+			}
+
 		}
 	}
 

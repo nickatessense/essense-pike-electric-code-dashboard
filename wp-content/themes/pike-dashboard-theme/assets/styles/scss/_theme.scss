@@ -8,7 +8,7 @@
 		@include breakpoint(desktopSmall){
 			margin: 1em;
 		}
-		@include breakpoint(tabletSmall){
+		@include breakpoint(tablet){
 			margin: 0em;
 			margin-top:55px;
 			max-width: 100vw;

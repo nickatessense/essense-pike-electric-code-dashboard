@@ -1,7 +1,9 @@
 .slick-slider{
+	position:relative;
 	.slick-arrow{
 		align-items:center;
 		border-radius:100%;
+		cursor: pointer;
 		display: flex;
 		font-size: 25px;
 		height: 25px;
@@ -20,7 +22,7 @@
 	}
 	.slick-track{
 		display: flex; 
-		height: 200px;
+		min-height: 200px;
 	}
 
 }

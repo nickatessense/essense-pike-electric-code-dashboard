@@ -18,70 +18,23 @@
 
 }
 
+#executive-training-page{
+	.slick-slider{
+		.slick-arrow{
+			background-color: $lightGrey;
+			color: white;
+			padding:1em;
+
+			&:hover{
+				background-color: $skyBlue;
+			}
+
+		}
+	}
+}
+
 
 #supervisor-training-page{
-
-
-	@include breakpoint(tablet){
-		#classification-summary, #experience-summary, #training-data-comparison{
-			h3{
-				font-size: 25px;
-				text-align: center;
-			}
-
-			.row.align-center.space-between{
-				justify-content: space-around;
-				margin: auto;
-				max-width: 90vw;
-				h3,.options{
-					width: initial;
-				}
-			}
-
-		}
-	}
-
-
-	@include breakpoint(tablet){
-		#classification-summary-modal, #experience-summary-modal{
-			.col-3{
-				border:none;
-				width: 100%;
-			}
-
-			.col-5{
-				width: 100%;
-			}
-
-			.padding-5{
-				padding:1em;
-			} 
-
-		}
-
-		#training-data-comparison{
-			.col-6{
-				padding:1em;
-				width: 100%;
-
-				.card-header{
-					padding:0em;
-					.col-3{
-						padding: 1em;
-						width: initial;
-					}
-				}
-			}
-
-			@include breakpoint(tabletSmall){
-				.padding-4{
-					padding:0px;
-				}
-			}
-
-		}
-
-	}
 
 	.summary{
 
@@ -112,25 +65,110 @@
 
 	}
 
-	@include breakpoint(tablet){
-		.charts{
-			.col-5{
+	@include breakpoint(desktopWide){
+
+		#training-data-comparison{
+			.col-6{
+				padding:1em;
 				width: 100%;
-				.essense-partners-chart{
-					margin:1em auto;
+
+				.card-header{
+					padding:0em;
+					.col-3{
+						padding: 1em;
+						width: initial;
+					}
 				}
 			}
+
+			@include breakpoint(tabletSmall){
+				.padding-4{
+					padding:0px;
+				}
+			}
+
 		}
+
+	}
+
+
+	@include breakpoint(tablet){
+		#classification-summary, #experience-summary, #training-data-comparison{
+			h3{
+				font-size: 25px;
+				text-align: center;
+			}
+
+			.row.align-center.space-between{
+				justify-content: space-around;
+				margin: 2em auto .5em;
+				max-width: 90vw;
+				h3{
+					text-align: left;
+				}
+				.options{
+					margin: 0px;
+				}
+			}
+
+			.charts{
+				.col-5{
+					width: 100%;
+					.essense-partners-chart{
+						margin:1em auto;
+					}
+				}
+			}
+
+		}
+
+		#classification-summary-modal, #experience-summary-modal{
+			.col-3{
+				border:none;
+				width: 100%;
+			}
+
+			.col-5{
+				width: 100%;
+			}
+
+			.padding-5{
+				padding:1em;
+			} 
+
+			.modal-body{
+				.dashicons{
+					margin: 0px;
+				}
+			}
+
+		}
+
 	}
 
 }
 
 #worker-training-page{
 
+	#training-summary{
+		.col-2{
+			width: 100%;
+		}
+	}
+
 	#assignments-and-pending-training{
 		.options{
 			h5{
 				cursor: pointer;
+
+				&:nth-of-type(2){
+					background-color: $lightGrey;
+					height: 2px;
+					margin: .25em 0em;
+					overflow: hidden;
+					width: 100%;
+				}
+
 			}
 		}
 		.table-container{
@@ -139,6 +177,8 @@
 				display: block;
 			}
 		}
+
+
 	}
 
 	#completed-training-modal{

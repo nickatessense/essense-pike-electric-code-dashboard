@@ -2,14 +2,15 @@
 <div id="workers-home-page">
 
 	<div class="row space-between">
-		<div class="col-6 padding-right-2">
-			<h3><strong>Employee Summary</strong></h3>
+		<div id="employee-summary" class="col-6 padding-right-2">
+			<h3 class="margin-bottom-1"><strong>Employee Summary</strong></h3>
+
 			<div class="card margin-y-2 padding-4">
-				<h6>
+				<h6 id="employee-summary-description">
 					<strong>
-						<span class="padding-x-1">John Doe</span>
-						<span class="border-x-dark padding-x-1 ">A lineman</span>
-						<span class="padding-x-1">Orlando, Fl</span>
+						<span>John Doe</span>
+						<span>A lineman</span>
+						<span>Orlando, Fl</span>
 					</strong>
 				</h6>
 
@@ -77,7 +78,7 @@
 			</div>
 		</div>
 		<div class="col-6 padding-left-2">
-			<h3><strong>Role Progression</strong></h3>
+			<h3 class="margin-bottom-1"><strong>Role Progression</strong></h3>
 			<div class="card margin-y-2 padding-4">
 
 				<h6 class="margin-bottom-1"><strong>VR Assessments</strong></h6>

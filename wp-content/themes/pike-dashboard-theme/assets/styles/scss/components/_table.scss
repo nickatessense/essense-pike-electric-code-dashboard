@@ -1,12 +1,12 @@
 @include breakpoint(phone){
 	.table-container{
-
 		&:before{
 			color:$lightGrey;
 			content: "Table is scrollable";
 			display: block;
 			padding:.5em;
 			text-align: center;
+			overflow: scroll;
 		}
 
 		table{

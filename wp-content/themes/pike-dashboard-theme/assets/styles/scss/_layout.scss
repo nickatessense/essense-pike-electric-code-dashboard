@@ -3,6 +3,16 @@
 	flex-wrap: wrap;
 	position:relative;
 	width: 100%;
+
+	@include breakpoint(tablet){
+		margin: auto;
+		max-width: 95vw;
+	}
+
+}
+
+.nowrap{
+	flex-wrap: nowrap;
 }
 
 .align-center{
@@ -19,6 +29,10 @@
 
 .space-around{
 	justify-content: space-around;
+}
+
+.flex-end{
+	justify-content: flex-end;
 }
 
 .margin-x-auto{

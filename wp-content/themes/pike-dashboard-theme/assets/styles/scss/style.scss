@@ -10,6 +10,11 @@
 @import "layout";
 @import "header";
 
+// Modifications to vendor styles
+@import "vendor/jquery_ui";
+@import "vendor/highcharts";
+@import "vendor/slick";
+
 // Reusable Components Styling
 @import "components/image";
 @import "components/card";
@@ -21,11 +26,6 @@
 @import "components/dashboard-filter";
 @import "components/progress_bar";
 @import "components/accordion";
-
-// Modifications to vendor styles
-@import "vendor/jquery_ui";
-@import "vendor/highcharts";
-@import "vendor/slick";
 
 // Page Specific scss
 @import "pages/homepage";

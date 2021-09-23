@@ -5,7 +5,7 @@
 	<div class="row">  	
 
 		<div id="training-summary" class="col-6 padding-1">
-			<h3 class="col-7 text-dark-blue margin-y-1"><strong>Training Summary</strong></h3>
+			<h3 class="text-dark-blue margin-y-1"><strong>Training Summary</strong></h3>
 			<div class="card">
 
 				<div class="padding-bottom-6 border-bottom-grey">

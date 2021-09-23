@@ -10,7 +10,7 @@ get_header();
 
     <div id="worker-training-page" class="training-page" >
 
-        <div class="row">
+        <div id="training-summary" class="row">
             <h4><strong>Training Summary</strong></h4>
             <div class="card padding-top-6 padding-x-6 margin-y-2">
                 <div class="row">

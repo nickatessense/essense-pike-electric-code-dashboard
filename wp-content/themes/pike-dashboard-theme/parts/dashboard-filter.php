@@ -44,7 +44,7 @@
 				<span>Add More Data (Expand Data Set)</span>
 			</button>
 
-			<span class="text-light-grey margin-x-4 margin-y-2">----OR----</span>
+			<span class="text-light-grey text-center margin-x-4 margin-y-2">----OR----</span>
 
 			<button class="btn btn-round btn-light-skyBlue">
 				<span class="dashicons dashicons-plus-alt2"></span>

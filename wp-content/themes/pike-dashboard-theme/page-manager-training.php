@@ -11,9 +11,9 @@ get_header();
 		<?php include_once 'parts/dashboard-filter.php' ?>
 
 		<div id="classification-summary" class="summary">
-			<div class="row align-center space-between">
-				<h3 class="col-9 text-dark-blue margin-y-1"><strong>Classification Summary</strong></h3>
-				<div class="row options">
+			<div class="row align-center space-between margin-top-3">
+				<h3 class="col-9 margin-y-1"><strong>Classification Summary</strong></h3>
+				<div class="col-3 flex-end row options">
 					<div class="option active border-skyBlue" data-action='toggle-tables'>
 						<span class="tiny-icon dashicons dashicons-menu"></span>
 					</div>
@@ -55,9 +55,9 @@ get_header();
 		</div>
 
 		<div id="experience-summary" class="summary">
-			<div class="row align-center space-between margin-top-5">
+			<div class="row align-center space-between margin-top-3">
 				<h3 class="col-9 text-dark-blue margin-y-1"><strong>Experience Summary</strong></h3>
-				<div class="row options">
+				<div class="col-3 flex-end row options">
 					<div class="option active border-skyBlue" data-action='toggle-tables'>
 						<span class="tiny-icon dashicons dashicons-menu"></span>
 					</div>
@@ -188,7 +188,7 @@ get_header();
 		<div id="classification-summary-modal" class="modal-container">
 			<div class="modal large">
 				<div class="modal-header text-center">
-					<h3><strong>Classification Summary - Training</strong></h3>
+					<h3 class="text-white"><strong>Classification Summary - Training</strong></h3>
 					<div class="modal-options">
 						<span class="dashicons dashicons-no modal-exit"></span>
 					</div>
@@ -228,9 +228,7 @@ get_header();
 						</div>
 					</div>
 
-					<p class="text-dark-blue padding-y-2"><strong>Common Feedback:</strong></p>
-
-					<p class="text-light-grey text-center mobile-only">Table is scrollable</p>
+					<p class="text-dark-blue padding-top-5 padding-bottom-1"><strong>Common Feedback:</strong></p>
 
 					<div class="table-container overflow-scroll">
 
@@ -256,9 +254,7 @@ get_header();
 
 					</div>
 
-					<p class="text-dark-blue padding-y-2"><strong>Common Areas of Improvement:</strong></p>
-
-					<p class="text-light-grey text-center mobile-only">Table is scrollable</p>
+					<p class="text-dark-blue padding-top-5 padding-bottom-1"><strong>Common Areas of Improvement:</strong></p>
 
 					<div class="table-container overflow-scroll">
 					<?php
@@ -282,9 +278,7 @@ get_header();
 					?>
 					</div>
 
-					<p class="text-dark-blue padding-y-2"><strong>Experience Summary</strong></p>
-
-					<p class="text-light-grey text-center mobile-only">Table is scrollable</p>
+					<p class="text-dark-blue padding-top-5 padding-bottom-1"><strong>Experience Summary</strong></p>
 
 					<div class="table-container overflow-scroll">
 					<?php
@@ -320,7 +314,7 @@ get_header();
 		<div id="experience-summary-modal" class="modal-container">
 			<div class="modal large">
 				<div class="modal-header text-center">
-					<h3><strong>Experience Summary - Training</strong></h3>
+					<h3 class="text-white"><strong>Experience Summary - Training</strong></h3>
 					<div class="modal-options">
 						<span class="dashicons dashicons-no modal-exit"></span>
 					</div>
@@ -369,9 +363,7 @@ get_header();
 
 					<div class="row space-around">
 						<div class="col-5">
-							<p class="text-dark-blue padding-y-2"><strong>Common Feedback:</strong></p>
-
-							<p class="text-light-grey text-center mobile-only">Table is scrollable</p>
+							<p class="text-dark-blue padding-top-5 padding-bottom-1"><strong>Common Feedback:</strong></p>
 
 							<div class="table-container overflow-scroll">
 							<?php
@@ -394,9 +386,7 @@ get_header();
 							</div>
 						</div>
 						<div class="col-5">
-							<p class="text-dark-blue padding-y-2"><strong>Common Areas of Improvement:</strong></p>
-
-							<p class="text-light-grey text-center mobile-only">Table is scrollable</p>
+							<p class="text-dark-blue padding-top-5 padding-bottom-1"><strong>Common Areas of Improvement:</strong></p>
 
 							<div class="table-container overflow-scroll">
 							<?php
@@ -420,9 +410,7 @@ get_header();
 					</div>
 
 					<div class="padding-5">
-						<p class="text-dark-blue padding-y-2"><strong>High Scores (Top 10):</strong></p>
-
-						<p class="text-light-grey text-center mobile-only">Table is scrollable</p>
+						<p class="text-dark-blue padding-top-5 padding-bottom-1"><strong>High Scores (Top 10):</strong></p>
 
 						<div class="table-container overflow-scroll">
 						<?php

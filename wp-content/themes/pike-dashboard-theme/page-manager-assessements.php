@@ -12,23 +12,15 @@ get_header();
 
 		<div id="classification-summary" class="summary">
 			<div class="row align-center space-between">
-				<h3 class="col-9 text-dark-blue margin-y-1"><strong>Classification Summary</strong></h3>
-				<div class="row options">
-					<div class="option active border-skyBlue" data-action='toggle-tables'>
-						<span class="tiny-icon dashicons dashicons-menu"></span>
-					</div>
-					<div class="option border-skyBlue" data-action='toggle-charts'>
-						<img class="tiny-icon" src="<?php echo get_template_directory_uri() . '/assets/images/line-chart.svg' ?>">
-					</div>
-				</div>
+				<h3 class="col-9 text-dark-blue margin-top-3 margin-bottom-1"><strong>Classification Summary</strong></h3>
 			</div>
-			<div class="card row space-around">
+			<div class="card row space-around padding-y-5 padding-x-2">
 				<div class="tables col-6">
 					<?php 
 						generateTable([
 							'headers' => [
 								'Classification',
-								'Average Score'
+								'% Passed'
 							],
 							'rows' => [
 								['Foreman', '60%'],
@@ -49,16 +41,8 @@ get_header();
 		<div id="experience-summary" class="summary">
 			<div class="row align-center space-between margin-top-5">
 				<h3 class="col-9 text-dark-blue margin-y-1"><strong>Experience Summary</strong></h3>
-				<div class="row options">
-					<div class="option active border-skyBlue" data-action='toggle-tables'>
-						<span class="tiny-icon dashicons dashicons-menu"></span>
-					</div>
-					<div class="option border-skyBlue" data-action='toggle-charts'>
-						<img class="tiny-icon" src="<?php echo get_template_directory_uri() . '/assets/images/line-chart.svg' ?>">
-					</div>
-				</div>
 			</div>
-			<div class="card row space-around">
+			<div class="card row space-around padding-y-5 padding-x-2">
 				<div class="tables col-6">
 					<?php 
 						generateTable([
@@ -175,7 +159,7 @@ get_header();
 		<div id="classification-summary-modal" class="modal-container">
 			<div class="modal large">
 				<div class="modal-header text-center">
-					<h3><strong>Classification Summary - Assessments</strong></h3>
+					<h3 class="text-white"><strong>Classification Summary - Assessments</strong></h3>
 					<div class="modal-options">
 						<span class="dashicons dashicons-no modal-exit"></span>
 					</div>

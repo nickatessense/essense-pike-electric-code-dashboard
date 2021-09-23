@@ -2,9 +2,12 @@
 	background-color: white;
 	box-shadow: 0px 7px 10px rgba(0,0,0,.05);
 	border-radius:10px;
+	margin: auto;
+	max-width: 95vw;
 	position:relative;
 	overflow: hidden;
 	width: 100%;
+	
 	@include breakpoint(phone){
 		margin: 1em auto;
 		padding: 1em;

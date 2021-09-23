@@ -48,9 +48,13 @@
 
 				<?php
 
-				if (in_array('supervisor', $current_user->roles) || in_array('administrator', $current_user->roles)) {
+				if ( in_array('executive', $current_user->roles) || in_array('administrator', $current_user->roles) ) {
+					wp_nav_menu([ 'menu' => 'executive-menu']);
+				}
+				else if ( in_array('supervisor', $current_user->roles) ) {
 					wp_nav_menu([ 'menu' => 'supervisor-menu']);
-				}else if (in_array('worker', $current_user->roles)) {
+				}
+				else if (in_array('worker', $current_user->roles)) {
 					wp_nav_menu([ 'menu' => 'worker-menu']);
 				}
 
