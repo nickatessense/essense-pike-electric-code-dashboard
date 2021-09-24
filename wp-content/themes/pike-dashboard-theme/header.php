@@ -3,7 +3,6 @@
 	$current_user = wp_get_current_user();
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,6 +26,8 @@
 </head>
 <body <?php body_class(); ?> >
 
+	<?php if (is_user_logged_in()) { ?>
+
 	<nav id="mobile-nav">
 		<div class="row align-center space-between padding-1">
 			<h1 class="title font-fira-code">electric <span>code</span></h1>
@@ -39,12 +40,13 @@
 		<header id="main-sidebar" class="sidebar">
 
 			<div class="sidebar-content">
+
 				<h1 class="title font-fira-code">electric <span>code</span></h1>
 
 				<img class="profile-img-circle" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
 
-				<h6 class="text-white">John Doe</h6>
-				<p class="text-light-grey">johndoe@pike.com</p>
+				<h6 class="text-white"><?php echo $current_user->user_firstname . ' '. $current_user->user_lastname; ?></h6>
+				<p class="text-light-grey"><?php echo $current_user->user_email; ?></p>
 
 				<?php
 
@@ -58,7 +60,12 @@
 					wp_nav_menu([ 'menu' => 'worker-menu']);
 				}
 
+				echo "<a id='logout-link' href='". wp_logout_url('/') ."'>Logout</a>";
+
 				?>
 
-				</div>
+			</div>
 		</header>
+
+
+	<?php } ?>

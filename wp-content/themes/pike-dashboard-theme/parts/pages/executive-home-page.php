@@ -26,8 +26,8 @@
 	</div>
 
 
-	<div class="row slider">
-		<div class="col-5 margin-x-2">
+	<div id="training-summaries" class="row slider slider-arrows-fixed">
+		<div class="training-summary">
 			<h3 class="text-dark-blue margin-y-1"><strong>Overall</strong></h3>
 			<div class="card padding-y-5">
 				<p class="text-center"><strong>Training Summary</strong></p>
@@ -94,7 +94,7 @@
 			</div>
 		</div>
 
-		<div class="col-5 margin-x-2">
+		<div class="training-summary">
 			<h3 class="text-dark-blue margin-y-1"><strong>West Region</strong></h3>
 			<div class="card padding-y-5">
 				<p class="text-center"><strong>Training Summary</strong></p>
@@ -161,7 +161,7 @@
 			</div>
 		</div>
 
-		<div class="col-5 margin-x-2">
+		<div class="training-summary">
 			<h3 class="text-dark-blue margin-y-1"><strong>East Region</strong></h3>
 			<div class="card padding-y-5">
 				<p class="text-center"><strong>Training Summary</strong></p>
@@ -190,6 +190,7 @@
 
 					<p class="text-center margin-bottom-2"><strong>Training Experience % Complete</strong></p>
 
+					
 					<?php 
 	                    generateTable([
 	                        'headers' => [

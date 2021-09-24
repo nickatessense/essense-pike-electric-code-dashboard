@@ -20,15 +20,151 @@
 
 #executive-training-page{
 	.slick-slider{
+		position:relative;
+
+		.slick-list{
+			overflow: initial;
+		}
+
 		.slick-arrow{
 			background-color: $lightGrey;
 			color: white;
 			padding:1em;
-
 			&:hover{
 				background-color: $skyBlue;
 			}
 
+			&.slick-disabled {
+			    opacity: 0;
+			    pointer-events:none;
+			}
+
+			&.slick-prev{
+				right: 90%;
+			}
+			&.slick-next{
+				left: 90%;
+			}
+
+		}
+	}
+
+	#training-summaries{
+		position:relative;
+
+		.training-summary{
+			max-width: 30vw;
+			margin:1em;
+			width: 25%;
+
+			@include breakpoint(desktopWide){
+				max-width: 400px;
+			}
+			@include breakpoint(tabletSmall){
+				max-width: 325px;
+			}
+			@include breakpoint(phone){
+				max-width: 80vw;
+			}
+
+		}
+	}
+
+	@include breakpoint(desktopSmall){
+		padding-left:1em;	
+	}
+
+
+	@include breakpoint(tablet){
+		margin:auto;
+		width: 95vw;
+	}
+
+	@include breakpoint(phone){
+		margin: 0px auto;
+		padding:0px;
+
+		.card:first-of-type{
+			text-align: center;
+			.row{
+				margin: 1em 0px;
+				*:not(.btn-switch){
+					text-align: center;
+					width: 100%;
+				}
+				.btn-switch{
+					margin:1em auto;
+				}
+			}
+		}
+
+		#training-summaries{
+			padding-left:1em;
+
+			.training-summary{
+				max-width: 90vw;
+				.padding-6{
+					padding:0px;
+				}
+
+				table{
+					td{
+						text-align: center;
+						button{
+							margin: 0px;
+							padding:0px;
+							width: initial;
+						}
+					}
+				}
+
+			}
+		}
+		.slick-slider{
+			.slick-arrow{
+				&.slick-prev{
+					right: 85%;
+				}
+				&.slick-next{
+					left: 85%;
+				}
+			}
+		}
+
+	}
+
+	@include breakpoint(phoneSmall){
+		#training-summaries{
+			padding-left:.5em;
+
+			.training-summary{
+				max-width: 90vw;
+				.padding-6{
+					padding:0px;
+				}
+
+				table{
+					td{
+						text-align: center;
+						button{
+							margin: 0px;
+							padding:0px;
+							width: initial;
+						}
+					}
+				}
+
+			}
+		}
+		.slick-slider{
+			.slick-arrow{
+				&.slick-prev{
+					right: 85%;
+				}
+				&.slick-next{
+					left: 85%;
+				}
+			}
 		}
 	}
 }
@@ -86,7 +222,25 @@
 					padding:0px;
 				}
 			}
+		}
 
+		#classification-summary-modal{
+			.modal-body{
+				padding: 1em;
+			}
+		}
+
+		#experience-summary-modal{
+			.modal-body{
+				padding: 1em;
+
+				.row:nth-of-type(3){
+					.col-5{
+						width: 100%;
+					}
+				}
+
+			}
 		}
 
 	}
@@ -150,23 +304,20 @@
 
 #worker-training-page{
 
-	#training-summary{
-		.col-2{
-			width: 100%;
-		}
-	}
 
 	#assignments-and-pending-training{
 		.options{
 			h5{
 				cursor: pointer;
 
-				&:nth-of-type(2){
-					background-color: $lightGrey;
-					height: 2px;
-					margin: .25em 0em;
-					overflow: hidden;
-					width: 100%;
+				@include breakpoint(phone){
+					&:nth-of-type(2){
+						background-color: $lightGrey;
+						height: 2px;
+						margin: .25em 0em;
+						overflow: hidden;
+						width: 100%;
+					}
 				}
 
 			}
@@ -178,7 +329,20 @@
 			}
 		}
 
+		#assignments-and-pending-table{
+			button{
+				margin: 1em;
+				padding:5px 15px;
+				width: initial;
+			}
+		}
 
+	}
+
+	#no-data-available-modal{
+		.padding-10{
+			padding: 2em 0px;
+		}
 	}
 
 	#completed-training-modal{
@@ -190,6 +354,89 @@
 				display: none;
 			}
 		}
+	}
+
+
+	@include breakpoint(desktopSmall){
+
+		#performance-summary{
+			.col-7{
+				width: 100%;
+			}
+			.col-5{
+				width: 100%;
+			}
+		}
+
+	}
+
+	@include breakpoint(desktopSmall){
+
+		#completed-training-modal{
+			.modal-body{
+				padding: 1em;
+
+				.row:nth-of-type(2){
+					padding:0px;
+					.col-3{
+						width: 33%;
+					}
+				}
+
+			}
+		}
+
+		#performance-trends{
+			.row:nth-of-type(1){
+				.col-2{
+					border-right:none;
+					width: 100%;
+
+					.margin-y-3{
+						display: inline-block;
+						margin: 1em;
+					}
+				}
+				.col-9{
+					width: 100%;
+				}
+			}	
+			.row:nth-of-type(2){
+				.col-5{
+					width: 100%;
+				}
+			}
+		}
+
+	}
+
+	@include breakpoint(phone){
+		#training-summary{
+			.col-2{
+				width: 100%;
+			}
+		}
+
+		#completed-training-modal{
+			#training-results{
+				.row:first-of-type{
+					div{
+						margin:0px 1em;
+					}
+					.dashicons{
+						margin: 0px;
+					}
+				}
+				.row:nth-of-type(2){
+					.col-3{
+						border-left:none;
+						border-right:none;
+						width: 100%;
+					}
+				}	
+			}
+		}
+
 	}
 
 }

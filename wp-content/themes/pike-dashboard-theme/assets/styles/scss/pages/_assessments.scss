@@ -15,15 +15,151 @@
 
 #executive-assessements-page{
 	.slick-slider{
+		position:relative;
+
+		.slick-list{
+			overflow: initial;
+		}
+
 		.slick-arrow{
 			background-color: $lightGrey;
 			color: white;
 			padding:1em;
-
 			&:hover{
 				background-color: $skyBlue;
 			}
 
+			&.slick-disabled {
+			    opacity: 0;
+			    pointer-events:none;
+			}
+
+			&.slick-prev{
+				right: 90%;
+			}
+			&.slick-next{
+				left: 90%;
+			}
+
+		}
+	}
+
+	#training-summaries{
+		position:relative;
+
+		.training-summary{
+			max-width: 30vw;
+			margin:1em;
+			width: 25%;
+
+			@include breakpoint(desktopWide){
+				max-width: 400px;
+			}
+			@include breakpoint(tabletSmall){
+				max-width: 325px;
+			}
+			@include breakpoint(phone){
+				max-width: 80vw;
+			}
+
+		}
+	}
+
+	@include breakpoint(desktopSmall){
+		padding-left:1em;	
+	}
+
+
+	@include breakpoint(tablet){
+		margin:auto;
+		width: 95vw;
+	}
+
+	@include breakpoint(phone){
+		margin: 0px auto;
+		padding:0px;
+
+		.card:first-of-type{
+			text-align: center;
+			.row{
+				margin: 1em 0px;
+				*:not(.btn-switch){
+					text-align: center;
+					width: 100%;
+				}
+				.btn-switch{
+					margin:1em auto;
+				}
+			}
+		}
+
+		#training-summaries{
+			padding-left:1em;
+
+			.training-summary{
+				max-width: 90vw;
+				.padding-6{
+					padding:0px;
+				}
+
+				table{
+					td{
+						text-align: center;
+						button{
+							margin: 0px;
+							padding:0px;
+							width: initial;
+						}
+					}
+				}
+
+			}
+		}
+		.slick-slider{
+			.slick-arrow{
+				&.slick-prev{
+					right: 85%;
+				}
+				&.slick-next{
+					left: 85%;
+				}
+			}
+		}
+
+	}
+
+	@include breakpoint(phoneSmall){
+		#training-summaries{
+			padding-left:.5em;
+
+			.training-summary{
+				max-width: 90vw;
+				.padding-6{
+					padding:0px;
+				}
+
+				table{
+					td{
+						text-align: center;
+						button{
+							margin: 0px;
+							padding:0px;
+							width: initial;
+						}
+					}
+				}
+
+			}
+		}
+		.slick-slider{
+			.slick-arrow{
+				&.slick-prev{
+					right: 85%;
+				}
+				&.slick-next{
+					left: 85%;
+				}
+			}
 		}
 	}
 }
@@ -31,6 +167,11 @@
 #manager-assessment-page{
 
 	@include breakpoint(desktopWide){
+
+		.essense-partners-chart{
+			margin:4em auto;
+		}
+
 		#assessment-data-comparison{
 			.col-6{
 				padding:1em;
@@ -42,6 +183,14 @@
 						width: initial;
 					}
 				}
+			}
+		}
+	}
+
+	@include breakpoint(tablet){
+		#classification-summary-modal{
+			.modal-body{
+				padding:1em;
 			}
 		}
 	}
@@ -62,7 +211,34 @@
 				}
 			}
 
+			table{
+				td{
+					text-align: center;
+					button{
+						margin: 0px;
+						padding: 0px;
+						width: initial;
+					}
+				}
+			}
+
 		}
+
+		#classification-summary-modal{
+			.modal-body{
+				table{
+					td{
+						text-align: center;
+						button{
+							margin: 0px;
+							padding: 0px;
+							width: initial;
+						}
+					}
+				}
+			}
+		}
+
 	}
 
 	.summary{
@@ -111,8 +287,20 @@
 
 	#completed-and-pending-assessments{
 
-		.options h5[data-action]{
-			cursor: pointer;
+		.options{
+			h5[data-action]{
+				cursor: pointer;
+			}
+
+			@include breakpoint(phone){
+				h5:nth-of-type(2){
+					background-color: $lightGrey;
+					height: 2px;
+					margin: 10px 0em;
+					overflow: hidden;
+					width: 100%;
+				}
+			}
 		}
 
 		#pending-assessments-table{

@@ -1,5 +1,34 @@
 <?php
 
+function check_for_user_login(){
+
+    if ( !is_user_logged_in() ) {
+        get_template_part('page-login');
+        exit();
+    }
+
+}
+add_action('template_redirect', 'check_for_user_login');
+
+
+// Removes admin bar from users that are not admins
+add_action('after_setup_theme', 'remove_admin_bar');
+function remove_admin_bar() {
+    if (!current_user_can('administrator') && !is_admin()) {
+      show_admin_bar(false);
+    }
+}
+function block_dashboard_access() {
+    if ( is_admin() && !current_user_can( 'administrator' ) && ! (defined( 'DOING_AJAX' ) && DOING_AJAX) ) {
+         global $wp_query;
+        $wp_query->set_404();
+        status_header( 404 );
+        get_template_part( 404 ); 
+        exit();
+    }
+}
+
+add_action( 'init' , 'block_dashboard_access' );
 
 require_once(get_template_directory().'/includes/classes/class-highcharts.php');
 

@@ -24,7 +24,7 @@ get_header();
 
         <div id="assignments-and-pending-training">
 
-            <div class="row margin-top-4 options">
+            <div class="row margin-top-4 margin-bottom-1 options">
                 <h5 data-action='toggle-assignments-and-pending-table'><strong>Assignments and Pending Training (4) </strong></h5>
                 <h5 class="text-light-grey margin-x-1"><strong>|</strong></h5>
                 <h5 data-action='toggle-completed-training-table' class="text-light-grey"><strong>Completed Training(7) </strong></h5>
@@ -77,8 +77,8 @@ get_header();
 
         </div>
 
-        <h5 class="margin-top-4"><strong>Performance Summary</strong></h5>
-        <div class="row align-center card padding-5 margin-y-2">
+        <h5 class="margin-top-4 margin-x-2 margin-bottom-1"><strong>Performance Summary</strong></h5>
+        <div id="performance-summary" class="row align-center card padding-5 margin-y-2">
             <div class="col-7">
 
                 <?php $highcharts->generateSpiderChart('performance-summary-spider-chart', [
@@ -144,8 +144,8 @@ get_header();
          <div id="completed-training-modal" class="modal-container">
             <div class="modal large">
                 <div class="modal-header text-center">
-                    <h3 class="text-white"><strong>Training Results</strong></h3>
-                    <p class="text-sky-blue">Experience: Proper Use of a Loadbust Tool</p>
+                    <h3 class="text-white padding-bottom-1"><strong>Training Results</strong></h3>
+                    <p class="text-sky-blue padding-bottom-1">Experience: Proper Use of a Loadbust Tool</p>
                    <div class="modal-options">
                         <div class="training-results">
                             <img class="tiny-icon" src="<?php echo get_template_directory_uri() . '/assets/images/training-results.svg' ?>">

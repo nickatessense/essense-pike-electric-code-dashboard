@@ -3,7 +3,18 @@
 /*Template Name: Manager Training */ 
 
 get_header();
+
+// Only letting supervisors, executives, and administrators view this page
+if( !in_array('supervisor', $current_user->roles) && !in_array('executive', $current_user->roles) && !in_array('administrator', $current_user->roles) ){
+	global $wp_query;
+	$wp_query->set_404();
+	status_header( 404 );
+	get_template_part( 404 ); exit();
+}
+
 ?>
+
+
 <div id="page-content">
 
 	<div id="supervisor-training-page" class="training-page">

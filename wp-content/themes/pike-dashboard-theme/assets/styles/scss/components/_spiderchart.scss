@@ -1,0 +1,15 @@
+.spider-chart{
+	@include breakpoint(phone){
+		.spider-chart-data{
+			.spider-chart-name{
+
+			}
+			.spider-chart-value{
+
+			}	
+			.tooltip{
+				left: -1em;
+			}
+		}
+	}
+}

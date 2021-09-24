@@ -16,23 +16,25 @@
 
 				<p class="margin-x-1 margin-y-3">Tenure: 8 Years</p>	
 
-				<div class="row">
-					<div class="col-3 padding-2 text-dark-blue">Groundman</div>
-					<div class="col-3 padding-2 text-blue">C Lineman</div>
-					<div class="col-5 padding-2 text-sky-blue">B Lineman</div>
-					<div class="col-1 padding-2 text-teal"> A Lineman</div>
-				</div>
-				<div class="row">
-					<div class="col-3 padding-2 bg-darkBlue"></div>
-					<div class="col-3 padding-2 bg-blue"></div>
-					<div class="col-5 padding-2 bg-skyBlue"></div>
-					<div class="col-1 padding-2 bg-teal" style="transform: scale(1.5);"></div>
-				</div>
-				<div class="row">
-					<div class="col-3 padding-2 text-dark-blue"></div>
-					<div class="col-3 padding-2 text-blue"></div>
-					<div class="col-5 padding-2 text-sky-blue"></div>
-					<div class="col-1 padding-2 text-teal"> 1 Year Two Months</div>
+				<div class="timeline">
+					<div class="row nowrap">
+						<div class="col-3 padding-2 text-dark-blue">Groundman</div>
+						<div class="col-3 padding-2 text-blue">C Lineman</div>
+						<div class="col-5 padding-2 text-sky-blue">B Lineman</div>
+						<div class="col-1 padding-2 text-teal"> A Lineman</div>
+					</div>
+					<div class="row nowrap">
+						<div class="col-3 padding-2 bg-darkBlue"></div>
+						<div class="col-3 padding-2 bg-blue"></div>
+						<div class="col-5 padding-2 bg-skyBlue"></div>
+						<div class="col-1 padding-2 bg-teal" style="transform: scale(1.5);"></div>
+					</div>
+					<div class="row nowrap">
+						<div class="col-3 padding-2 text-dark-blue"></div>
+						<div class="col-3 padding-2 text-blue"></div>
+						<div class="col-5 padding-2 text-sky-blue"></div>
+						<div class="col-1 padding-2 text-teal"> 1 Year Two Months</div>
+					</div>
 				</div>
 
 				<h5 class="margin-1"><strong>Highlights</strong></h5>

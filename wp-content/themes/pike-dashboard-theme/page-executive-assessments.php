@@ -3,6 +3,15 @@
 /*Template Name: Executive Assessements */ 
 
 get_header();
+
+// Only letting executives and administrators view this page
+if( !in_array('executive', $current_user->roles) && !in_array('administrator', $current_user->roles) ){
+    global $wp_query;
+    $wp_query->set_404();
+    status_header( 404 );
+    get_template_part( 404 ); exit();
+}
+
 ?>
 
 <div id="page-content">
@@ -13,8 +22,8 @@ get_header();
             <div class="row align-center margin-2">
                 <p class="text-light-grey">Scores Use: All attempts</p>
                 <label class="btn-switch">
-                  <input type="checkbox">
-                  <span class="switch round"></span>
+                <input type="checkbox">
+                <span class="switch round"></span>
                 </label>
                 <p class="text-sky-blue">Rolling Average (Last 5 Attempts)</p>
             </div>
@@ -35,8 +44,8 @@ get_header();
         </div>
 
 
-        <div class="row slider">
-            <div class="col-5 margin-x-2">
+        <div id="training-summaries" class="row slider slider-arrows-fixed">
+            <div class="training-summary">
                 <h3 class="text-dark-blue margin-y-1"><strong>Overall</strong></h3>
                 <div class="card padding-y-5">
                     <p class="text-center"><strong>Training Summary</strong></p>
@@ -103,7 +112,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="col-5 margin-x-2">
+            <div class="training-summary">
                 <h3 class="text-dark-blue margin-y-1"><strong>West Region</strong></h3>
                 <div class="card padding-y-5">
                     <p class="text-center"><strong>Training Summary</strong></p>
@@ -170,7 +179,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="col-5 margin-x-2">
+            <div class="training-summary">
                 <h3 class="text-dark-blue margin-y-1"><strong>East Region</strong></h3>
                 <div class="card padding-y-5">
                     <p class="text-center"><strong>Training Summary</strong></p>
@@ -199,6 +208,7 @@ get_header();
 
                         <p class="text-center margin-bottom-2"><strong>Training Experience % Complete</strong></p>
 
+                        
                         <?php 
                             generateTable([
                                 'headers' => [

@@ -26,9 +26,12 @@
 @import "components/dashboard-filter";
 @import "components/progress_bar";
 @import "components/accordion";
+@import "components/spiderchart";
 
 // Page Specific scss
 @import "pages/homepage";
 @import "pages/training";
 @import "pages/assessments";
 @import "pages/performance";
+@import "pages/404";
+@import "pages/login";

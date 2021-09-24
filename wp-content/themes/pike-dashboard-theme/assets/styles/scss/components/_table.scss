@@ -1,5 +1,6 @@
 @include breakpoint(phone){
 	.table-container{
+		overflow: scroll;
 		&:before{
 			color:$lightGrey;
 			content: "Table is scrollable";

@@ -1,5 +1,7 @@
 jQuery(document).ready(function($){
 
+
+    // Nav Menu Functionality
     mobileNavMenu();
 
     // Dropdown functionality
@@ -26,23 +28,31 @@ jQuery(document).ready(function($){
     // Initiates all accordion functionality
     accordion();
 
+    // Simulates position "fixed" on arrows relative to its parent rather then to windows
+    sliderArrowsFixed();
+
+    // Makes sure highcharts and other elements are sized properly
+    setTimeout(function(){
+        window.dispatchEvent(new Event('resize'));
+    }, 1000);
+
 
     // Slick slider
     $('.slider').slick({
         slidesToShow: 2.5,
         slidesToScroll: 1,
-        centerPadding: '30px',
         infinite:false,
         prevArrow: '<span class="slick-prev dashicons dashicons-arrow-left-alt2"></span>',
         nextArrow: '<span class="slick-next dashicons dashicons-arrow-right-alt2"></span>',
+        variableWidth: true,
         responsive: [
             {
-              breakpoint: 577,
-              settings: {
+                breakpoint: 1200,
+                settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-              }
-            }
+                }
+            },
         ]
     });
 
@@ -319,6 +329,28 @@ jQuery(document).ready(function($){
             }
 
         });
+
+    }
+
+    function sliderArrowsFixed(){
+
+        $(window).scroll( function(){
+            let scroll = $(window).scrollTop();
+            let sliderOffsetTop = $('.slider-arrows-fixed')[0].offsetTop;
+            let sliderOffsetHeight = $('.slider-arrows-fixed')[0].offsetHeight;
+            let sliderOffsetBottom = sliderOffsetTop + sliderOffsetHeight;
+            let prev_arrow = $('.slider-arrows-fixed .slick-prev');
+            let next_arrow = $('.slider-arrows-fixed .slick-next');
+
+            let win_height = window.innerHeight;
+
+            if (scroll > sliderOffsetTop && scroll+win_height < sliderOffsetBottom) {
+                let arrow_position = scroll - sliderOffsetTop + (win_height/2);
+                $(prev_arrow).css('top', arrow_position);
+                $(next_arrow).css('top', arrow_position);
+            }
+
+        } );
 
     }
 

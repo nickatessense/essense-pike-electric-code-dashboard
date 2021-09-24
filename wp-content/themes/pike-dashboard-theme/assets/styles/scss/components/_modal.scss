@@ -28,14 +28,13 @@
 		overflow: hidden;
 		&.large{
 			width: 85%;
+			@include breakpoint(phone){
+				width: 95%;
+			}
 		}
 		&.medium{
 			width: 50%;
-		}
-
-
-		@include breakpoint(phone){
-			&.large, .medium{
+			@include breakpoint(phone){
 				width: 95%;
 			}
 		}
@@ -47,9 +46,10 @@
 			position:relative;
 
 			@include breakpoint(phone){
+				text-align: left;
+				padding-right: 3em;
 				h3{
 					font-size: 20px;
-					margin-right: 2em;
 				}
 			}
 
@@ -75,6 +75,18 @@
 				.modal-exit{
 					margin-left: 1.5em;
 				}
+
+				@include breakpoint(desktopSmall){
+					justify-content: flex-start;
+					position:initial;
+
+					.modal-exit{
+						position: absolute;
+						top: 20%;
+						right: 0px;
+					}
+				}
+
 			}
 
 		}
@@ -85,7 +97,7 @@
 			overflow-y: scroll;
 			padding:4em;
 
-			@include breakpoint(phone){
+			@include breakpoint(desktopSmall){
 				padding: 1em;
 			}
 
